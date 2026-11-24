@@ -21,7 +21,7 @@ Primary (Colombian job boards - none has a CLI yet; scaffold one with `/add-port
 - **magneto365.com** - Colombian board with many tech and trainee postings
 
 Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies (PENDIENTE: target companies)
+- Direct Google searches with `site:` filters for known target companies; the verified list lives in `job_scraper/companies.yaml` and `/scrape-navegador` reads it with the built-in browser
 
 ## Query Categories
 

@@ -17,7 +17,7 @@ Responde al usuario en español.
 
 ## Step 1: Herramientas
 
-1. Busca las herramientas del navegador integrado: `mcp__Claude_Browser__*` (sesión en la app de escritorio) o `mcp__remote-devices__Claude_Browser__*` (sesión en la nube enlazada a tu PC). Pueden estar diferidas: cárgalas con la búsqueda de herramientas en una sola llamada (`navigate`, `get_page_text`, `find`, `read_page`, `tabs_create`, `tabs_context`, `request_access`).
+1. Busca las herramientas del navegador integrado: `mcp__Claude_Browser__*` (sesión en la app de escritorio) o `mcp__remote-devices__Claude_Browser__*` (sesión en la nube enlazada a tu PC). Pueden estar diferidas: cárgalas con la búsqueda de herramientas en una sola llamada (`navigate`, `get_page_text`, `find`, `read_page`, `javascript_tool`, `tabs_create`, `tabs_context`, `request_access`).
 2. Si no aparecen, la app de Claude está cerrada o el PC está apagado. Para las entradas con `json_endpoint` (paso 3a) sigue sin navegador; para las demás, dilo en una línea y termina. No uses Claude in Chrome salvo que el usuario lo pida.
 3. Si una herramienta del navegador responde que hay que pedir acceso a un sitio, llama a `request_access` con esa URL y alcance `site` (este comando vuelve a esos sitios en cada corrida), espera la respuesta y reintenta. Si el usuario lo niega, salta ese sitio y anótalo para el informe.
 
@@ -39,7 +39,7 @@ Si la entrada trae `json_endpoint` y es un GET (Greenhouse `boards-api`, Lever `
 
 1. Abre `list_url` (o `careers_url`) en una pestaña nueva del navegador integrado.
 2. Si la página tiene buscador o filtro de ubicación, úsalo con `find` + clic solo sobre controles de búsqueda o filtro (nunca sobre aplicar o iniciar sesión) para filtrar por Colombia o Bogotá, o abre la URL de búsqueda ya filtrada si la página la expone.
-3. Lee los resultados con `get_page_text`. De cada vacante toma título, ubicación, URL de la vacante y fecha de publicación si aparece. Si solo hay una URL de listado, abre la vacante para obtener su URL propia; nunca guardes un listado con `#fragmento`.
+3. Lee los resultados. `get_page_text` a veces devuelve solo el primer `<article>` de la página (pasa en Magneto, que muestra una vacante por artículo); si trae una sola vacante en una página que muestra varias, lee los enlaces de las tarjetas con `javascript_tool` en modo solo lectura, por ejemplo `[...document.querySelectorAll('a[href*="/empleos/"]')].map(a => ({t: a.innerText.trim().split('\n')[0], h: a.href}))`, o usa `read_page`. Ese script solo lee; nunca ejecutes uno que haga clic, envíe o escriba. De cada vacante toma título, ubicación, URL de la vacante y fecha de publicación si aparece. Si solo hay una URL de listado, abre la vacante para obtener su URL propia; nunca guardes un listado con `#fragmento`.
 4. Pasa a la página siguiente solo si la actual trajo al menos una coincidencia y no superas el tope.
 
 ### 3c. Portales

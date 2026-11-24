@@ -109,7 +109,7 @@ describe only what was built, the tools learned and the tech stack. -->
 - (Work mode is not a deal-breaker: hybrid in Bogotá is preferred; fully remote and fully on-site are acceptable)
 
 ## Repo Structure
-- `cv/` - LaTeX CV variants (active template: `templates/cv/minimal-word`, the candidate's own minimalist style; `cv/preamble.tex` is shared)
+- `cv/` - LaTeX CV variants. Master CVs: `cv/main_example.tex` (English) and `cv/main_example_es.tex` (Spanish); tailored CVs start from the master in the posting's language, and both masters must stay in sync (active template: `templates/cv/minimal-word`, the candidate's own minimalist style; `cv/preamble.tex` is shared)
 - `cover_letters/` - LaTeX cover letters (custom cover.cls template)
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job portal CLIs copied in from community-portals (none shipped)

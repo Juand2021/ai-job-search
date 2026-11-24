@@ -67,6 +67,8 @@ skills-lock.json
 # artifacts like main_example.pdf/.aux.
 cv/main_*.*
 !cv/main_example.tex
+# Spanish master CV (fork-local; allowlisted in .github/security-guards-local.txt)
+!cv/main_example_es.tex
 cv/*.txt
 cover_letters/cover_*.*
 cover_letters/Cover_*.*

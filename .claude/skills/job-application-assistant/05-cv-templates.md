@@ -9,7 +9,7 @@ framework_version: 1.4.9
 >
 > A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
 >
-> - **Template skeleton:** `templates/cv/minimal-word/template.tex` — use this as the structural reference instead of the stock template; the master CV `cv/main_example.tex` is a complete filled example
+> - **Template skeleton:** `templates/cv/minimal-word/template.tex` — use this as the structural reference instead of the stock template; the master CVs `cv/main_example.tex` (English) and `cv/main_example_es.tex` (Spanish) are complete filled examples
 > - **Manifest:** `templates/cv/minimal-word/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
 > - **Source extension:** `.tex`
 > - **Compile command:** `rm -f <file>.pdf && mkdir -p build && lualatex -interaction=nonstopmode -output-directory=build <file>.tex && mv build/<file>.pdf ./` (not the command named in the stock guidance below — `/apply`'s compile step must use this instead). Run it from the output directory (`cv/`). The log is in `build/`, and `/apply`'s Step 5e cleanup must delete that `build/` folder too
@@ -26,7 +26,7 @@ All CVs use the moderncv LaTeX package with the "banking" style and "blue" color
 
 **Output file:** `cv/main_<company>_<role>.tex`
 **Compile with:** **lualatex** on MiKTeX/TeX Live. pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors; lualatex handles the same sources cleanly.
-**Master reference:** `cv/main_example.tex` (comprehensive CV with all competencies, experience, and achievements - use as source when building targeted CVs)
+**Master reference:** `cv/main_example.tex` (English) and `cv/main_example_es.tex` (Spanish) - comprehensive CVs with all competencies, experience, and achievements. Start a tailored CV from the master in the posting's language (Spanish posting -> `main_example_es.tex`, otherwise `main_example.tex`); both carry the same facts, so a change to one must be made in the other too.
 
 ### Compile command
 

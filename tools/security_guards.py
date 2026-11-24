@@ -189,6 +189,8 @@ REQUIRED_IGNORE_RULES = [
     "job_search_tracker.csv",
     "gmail_sync/",
     "reports/",
+    # /postular and /dashboard settings (docs/pipeline-contract.md section 4).
+    "pipeline.config.json",
     "upskill/*.md",
     # Depth-independent twin of the rule above. The upskill *skill* resolves
     # `upskill/` relative to its own directory - the same observed behavior

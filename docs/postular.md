@@ -56,4 +56,4 @@ que todavía no te has postulado (corre antes `/scrape` y `/rank`).
 
 - Revisa el PDF y envía la postulación tú mismo.
 - Cuando la envíes: `/outcome <empresa>`.
-- El llenado automático de formularios llegará más adelante (Fase 5).
+- Para dejar el formulario del portal lleno en el navegador integrado, usa `/llenar-formulario <empresa>` (Fase 5). Se detiene antes de enviar.

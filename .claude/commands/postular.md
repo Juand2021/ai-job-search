@@ -124,7 +124,7 @@ One message, in this order:
    - Revisa el PDF y envía la postulación tú mismo: **esta herramienta nunca envía la postulación**; el clic final siempre es tuyo.
    - "Cuando la envíes: `/outcome <empresa>`" (moves the row to `applied`).
    - `/sincronizar` when Override 7 says so.
-   - Llenar formularios de postulación automáticamente llegará más adelante (Fase 5); por ahora se hace a mano.
+   - Para dejar el formulario lleno en el navegador (Fase 5): `/llenar-formulario <empresa>`. Se detiene antes de enviar; el clic final es del usuario.
 
 ## Important Rules
 

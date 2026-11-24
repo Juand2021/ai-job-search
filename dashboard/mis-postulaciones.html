@@ -1,0 +1,314 @@
+<title>Mis postulaciones</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: summary strip, then a five-column stage board that stacks on phones; a side sheet opens one application. */
+:root {
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --ink: #17212b;
+  --muted: #5b6875;
+  --line: #dde3ea;
+  --accent: #0e7c66;
+  --accent-soft: #e2f2ee;
+  --warn: #b26a00;
+  --bad: #b3261e;
+  --good: #1f7a3a;
+  --shadow: 0 8px 30px rgba(23, 33, 43, .14);
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11171d; --surface: #19222b; --ink: #e8edf2; --muted: #9aa8b5; --line: #2a3642;
+    --accent: #3cc3a3; --accent-soft: #163b34; --warn: #f0b354; --bad: #ff8a80; --good: #7bd88f;
+    --shadow: 0 8px 30px rgba(0, 0, 0, .5); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11171d; --surface: #19222b; --ink: #e8edf2; --muted: #9aa8b5; --line: #2a3642;
+  --accent: #3cc3a3; --accent-soft: #163b34; --warn: #f0b354; --bad: #ff8a80; --good: #7bd88f;
+  --shadow: 0 8px 30px rgba(0, 0, 0, .5); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 14px; line-height: 1.45; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-block: 24px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 20px; }
+header { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 12px; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4vw, 36px); letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+.sub { color: var(--muted); margin: 4px 0 0; }
+.status { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.status.warn { color: var(--warn); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 2px; }
+.kpi b { font-family: var(--display); font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.kpi span { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.kpi small { color: var(--muted); font-size: 12px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.tools input, .tools select, .sheet select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+.tools input { flex: 1 1 220px; min-width: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.board { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; align-items: start; }
+@media (max-width: 1000px) { .board { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .board { grid-template-columns: minmax(0, 1fr); } }
+.col { display: grid; gap: 8px; min-width: 0; }
+.col h2 { font-family: var(--display); font-weight: 500; font-size: 15px; margin: 0; display: flex; justify-content: space-between; align-items: baseline; padding: 0 2px 6px; border-bottom: 2px solid var(--col, var(--line)); }
+.col h2 em { font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.card { text-align: left; font: inherit; color: inherit; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px; display: grid; gap: 6px; cursor: pointer; min-width: 0; }
+.card:hover { border-color: var(--accent); }
+.card .co { font-weight: 600; overflow-wrap: anywhere; }
+.card .ro { color: var(--muted); overflow-wrap: anywhere; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
+.pill { display: inline-block; border-radius: 999px; padding: 1px 8px; font-size: 11.5px; font-weight: 500; background: var(--accent-soft); color: var(--accent); }
+.pill.warn { background: transparent; border: 1px solid var(--warn); color: var(--warn); }
+.pill.bad { background: transparent; border: 1px solid var(--bad); color: var(--bad); }
+.fit { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+.empty-col { color: var(--muted); font-size: 12.5px; padding: 8px 2px; }
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 24px; display: grid; gap: 8px; max-width: 70ch; }
+.empty h2 { font-family: var(--display); margin: 0; font-size: 20px; }
+.empty code, .sheet code { font-family: var(--mono); font-size: 12.5px; background: var(--accent-soft); color: var(--ink); padding: 1px 5px; border-radius: 4px; }
+.scrim { position: fixed; inset: 0; background: rgba(10, 15, 20, .35); }
+.sheet { position: fixed; top: 0; right: 0; bottom: 0; width: min(460px, 100%); background: var(--surface); box-shadow: var(--shadow); overflow-y: auto; padding: calc(env(safe-area-inset-top, 0px) + 20px) max(20px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 24px) 20px; display: grid; gap: 16px; align-content: start; }
+.sheet h2 { font-family: var(--display); font-size: 22px; margin: 0; overflow-wrap: anywhere; }
+.sheet .close { justify-self: end; font: inherit; background: none; border: 1px solid var(--line); color: var(--ink); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 6px 12px; margin: 0; }
+dt { color: var(--muted); }
+dd { margin: 0; overflow-wrap: anywhere; }
+a { color: var(--accent); }
+.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; border-left: 2px solid var(--line); }
+.timeline li { padding-left: 14px; position: relative; display: grid; gap: 2px; }
+.timeline li::before { content: ""; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+.timeline time { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.move { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.move select { flex: 1 1 200px; min-width: 0; }
+.btn { font: inherit; font-weight: 600; background: var(--accent); color: var(--surface); border: 0; border-radius: 8px; padding: 9px 14px; cursor: pointer; }
+.btn[disabled] { opacity: .5; cursor: default; }
+.note { font-size: 12.5px; color: var(--muted); }
+h3 { font-family: var(--display); font-weight: 500; font-size: 15px; margin: 0; }
+@media (prefers-reduced-motion: no-preference) { .sheet { animation: in .18s ease-out; } @keyframes in { from { transform: translateX(16px); opacity: .6; } } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Mis postulaciones</h1>
+      <p class="sub">Registro compartido entre tus computadores. Se llena con <code>/postular</code> y <code>/sincronizar</code>.</p>
+    </div>
+    <div class="status" id="status">Conectando con tus datos…</div>
+  </header>
+
+  <section class="kpis" id="kpis" aria-label="Resumen"></section>
+
+  <div class="tools">
+    <label for="q" class="note">Buscar</label>
+    <input id="q" type="search" placeholder="Empresa, cargo o portal">
+    <label for="sort" class="note">Orden</label>
+    <select id="sort">
+      <option value="recent">Más recientes</option>
+      <option value="fit">Mayor encaje</option>
+      <option value="deadline">Fecha límite</option>
+    </select>
+  </div>
+
+  <div id="main"></div>
+</div>
+
+<script>
+(() => {
+  const ETAPAS = [
+    ["borrador", "Borrador", "drafted"], ["enviada", "Enviada", "applied"], ["en_revision", "En revisión", "applied"],
+    ["prueba_tecnica", "Prueba técnica", "interview"], ["entrevista_rrhh", "Entrevista RRHH", "interview"],
+    ["entrevista_tecnica", "Entrevista técnica", "interview"], ["entrevista_final", "Entrevista final", "interview"],
+    ["oferta", "Oferta", "offer"], ["contratado", "Contratado", "hired"], ["rechazado", "Rechazado", "rejected"],
+    ["sin_respuesta", "Sin respuesta", "no_response"], ["oferta_rechazada", "Oferta rechazada", "offer_declined"],
+    ["retirada", "Retirada", "withdrawn"]
+  ];
+  const LABEL = Object.fromEntries(ETAPAS.map(e => [e[0], e[1]]));
+  const STATUS = Object.fromEntries(ETAPAS.map(e => [e[0], e[2]]));
+  const DEFAULT_ETAPA = { drafted: "borrador", applied: "enviada", interview: "entrevista_rrhh", offer: "oferta", hired: "contratado",
+    rejected: "rechazado", no_response: "sin_respuesta", "no response": "sin_respuesta", offer_declined: "oferta_rechazada",
+    "offer declined": "oferta_rechazada", withdrawn: "retirada" };
+  const COLUMNS = [
+    { id: "borrador", name: "Borrador", etapas: ["borrador"], color: "var(--line)" },
+    { id: "enviadas", name: "Enviadas", etapas: ["enviada", "en_revision"], color: "var(--muted)" },
+    { id: "proceso", name: "En proceso", etapas: ["prueba_tecnica", "entrevista_rrhh", "entrevista_tecnica", "entrevista_final"], color: "var(--accent)" },
+    { id: "oferta", name: "Oferta", etapas: ["oferta", "contratado"], color: "var(--good)" },
+    { id: "cerradas", name: "Cerradas", etapas: ["rechazado", "sin_respuesta", "oferta_rechazada", "retirada"], color: "var(--bad)" }
+  ];
+  const RESPONDED = new Set(["prueba_tecnica", "entrevista_rrhh", "entrevista_tecnica", "entrevista_final", "oferta", "contratado", "rechazado", "oferta_rechazada"]);
+
+  let apps = [];
+  let db = null;
+  let openId = null;
+  const $ = id => document.getElementById(id);
+
+  function el(tag, attrs, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (v == null || v === false) continue;
+      if (k === "class") n.className = v; else if (k === "on") for (const [ev, fn] of Object.entries(v)) n.addEventListener(ev, fn); else n.setAttribute(k, v);
+    }
+    for (const k of kids.flat()) if (k != null && k !== false) n.append(k instanceof Node ? k : String(k));
+    return n;
+  }
+  const str = v => (v == null ? "" : String(v));
+  const safeUrl = u => { u = str(u).trim(); return u.startsWith("https://") || u.startsWith("/_blob/") ? u : ""; };
+  const parseDate = s => { const t = Date.parse(str(s)); return isNaN(t) ? null : t; };
+  const fmtDate = t => t == null ? "" : new Date(t).toLocaleDateString("es-CO", { day: "numeric", month: "short", year: "numeric" });
+  const DAY = 864e5;
+
+  function normalize(id, d) {
+    const events = Array.isArray(d.events) ? d.events.filter(e => e && LABEL[e.etapa]).slice().sort((a, b) => str(a.ts).localeCompare(str(b.ts))) : [];
+    let etapa = LABEL[d.etapa] ? d.etapa : (events.length ? events[events.length - 1].etapa : DEFAULT_ETAPA[str(d.status).toLowerCase()] || "borrador");
+    const sentEv = events.find(e => e.etapa === "enviada");
+    const sent = sentEv ? parseDate(sentEv.ts) : (etapa !== "borrador" ? parseDate(d.date) : null);
+    const firstReply = events.find(e => RESPONDED.has(e.etapa));
+    const last = events.length ? parseDate(events[events.length - 1].ts) : parseDate(d.updated_at) || parseDate(d.date);
+    const fit = typeof d.fit_rating === "number" ? d.fit_rating : (str(d.fit_rating) && !isNaN(+d.fit_rating) ? +d.fit_rating : null);
+    return { id, d, events, etapa, sent, last, fit, firstReply: firstReply ? parseDate(firstReply.ts) : null,
+      deadline: parseDate(d.deadline), text: [d.company, d.role, d.channel, d.sector, d.source].map(str).join(" ").toLowerCase() };
+  }
+
+  function renderKpis() {
+    const box = $("kpis"); box.replaceChildren();
+    const sent = apps.filter(a => a.etapa !== "borrador");
+    const active = sent.filter(a => COLUMNS[1].etapas.includes(a.etapa) || COLUMNS[2].etapas.includes(a.etapa) || a.etapa === "oferta");
+    const replied = sent.filter(a => RESPONDED.has(a.etapa) || a.events.some(e => RESPONDED.has(e.etapa)));
+    const interviews = sent.filter(a => a.events.some(e => e.etapa.startsWith("entrevista")) || a.etapa.startsWith("entrevista"));
+    const waits = sent.filter(a => a.sent != null && a.firstReply != null).map(a => (a.firstReply - a.sent) / DAY).sort((x, y) => x - y);
+    const median = waits.length ? Math.round(waits[Math.floor((waits.length - 1) / 2)]) : null;
+    const week = sent.filter(a => a.sent != null && Date.now() - a.sent < 7 * DAY).length;
+    const drafts = apps.length - sent.length;
+    const tiles = [
+      ["Enviadas", sent.length, `${week} en los últimos 7 días`],
+      ["Activas", active.length, "esperando respuesta o en proceso"],
+      ["Tasa de respuesta", sent.length ? Math.round(100 * replied.length / sent.length) + " %" : "–", `${replied.length} de ${sent.length} con respuesta`],
+      ["Entrevistas", interviews.length, "procesos con al menos una"],
+      ["Días a 1.ª respuesta", median == null ? "–" : median, "mediana"],
+      ["Borradores", drafts, "listos para enviar"]
+    ];
+    for (const [k, v, s] of tiles) box.append(el("div", { class: "kpi" }, el("span", {}, k), el("b", {}, v), el("small", {}, s)));
+  }
+
+  function card(a) {
+    const days = a.last != null ? Math.floor((Date.now() - a.last) / DAY) : null;
+    const meta = el("div", { class: "meta" }, el("span", { class: "pill" }, LABEL[a.etapa]));
+    if (a.fit != null) meta.append(el("span", { class: "fit", title: "Encaje" }, `${Math.round(a.fit)}/100`));
+    if (str(a.d.channel)) meta.append(el("span", {}, str(a.d.channel)));
+    if (a.deadline != null && a.etapa === "borrador") {
+      const left = Math.ceil((a.deadline - Date.now()) / DAY);
+      if (left < 0) meta.append(el("span", { class: "pill bad" }, "Venció"));
+      else if (left <= 7) meta.append(el("span", { class: "pill warn" }, `Cierra en ${left} d`));
+    }
+    if (days != null) meta.append(el("span", {}, days === 0 ? "hoy" : `hace ${days} d`));
+    return el("button", { class: "card", type: "button", on: { click: () => openSheet(a.id) } },
+      el("span", { class: "co" }, str(a.d.company) || "Empresa sin nombre"),
+      el("span", { class: "ro" }, str(a.d.role) || "Cargo sin nombre"), meta);
+  }
+
+  function render() {
+    renderKpis();
+    const main = $("main"); main.replaceChildren();
+    if (!apps.length) {
+      main.append(el("div", { class: "empty" },
+        el("h2", {}, "Aún no hay postulaciones aquí"),
+        el("p", {}, "En Claude Code, en cualquiera de tus computadores, pega el link de una vacante con ", el("code", {}, "/postular"), ". Cuando termine, ", el("code", {}, "/sincronizar"), " sube la postulación y aparece en este tablero."),
+        el("p", { class: "note" }, "Las postulaciones que ya tengas en tu registro local también suben con /sincronizar.")));
+      return;
+    }
+    const q = $("q").value.trim().toLowerCase();
+    const sort = $("sort").value;
+    let list = apps.filter(a => !q || a.text.includes(q));
+    const by = { recent: (x, y) => (y.last || 0) - (x.last || 0), fit: (x, y) => (y.fit ?? -1) - (x.fit ?? -1),
+      deadline: (x, y) => (x.deadline ?? Infinity) - (y.deadline ?? Infinity) }[sort];
+    list = list.slice().sort(by);
+    const board = el("div", { class: "board" });
+    for (const c of COLUMNS) {
+      const items = list.filter(a => c.etapas.includes(a.etapa));
+      const col = el("section", { class: "col", style: `--col:${c.color}`, "aria-label": c.name },
+        el("h2", {}, c.name, el("em", {}, items.length)));
+      if (!items.length) col.append(el("div", { class: "empty-col" }, q ? "Nada coincide" : "Vacío"));
+      items.forEach(a => col.append(card(a)));
+      board.append(col);
+    }
+    main.append(board);
+  }
+
+  function isoNow() {
+    const d = new Date(), off = -d.getTimezoneOffset(), sign = off >= 0 ? "+" : "-", p = n => String(Math.floor(Math.abs(n))).padStart(2, "0");
+    return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}${sign}${p(off / 60)}:${p(off % 60)}`;
+  }
+
+  function closeSheet() { openId = null; document.querySelectorAll(".scrim,.sheet").forEach(n => n.remove()); }
+
+  function openSheet(id) {
+    closeSheet();
+    const a = apps.find(x => x.id === id); if (!a) return;
+    openId = id;
+    const d = a.d;
+    const info = el("dl", {});
+    const row = (k, v) => { if (v instanceof Node || str(v)) info.append(el("dt", {}, k), el("dd", {}, v)); };
+    row("Etapa", LABEL[a.etapa]);
+    row("Encaje", a.fit != null ? `${Math.round(a.fit)}/100` : "");
+    row("Canal", d.channel); row("Sector", d.sector); row("Contacto", d.contact_person);
+    row("Fecha límite", a.deadline != null ? fmtDate(a.deadline) : "");
+    const src = safeUrl(d.source); if (src) row("Vacante", el("a", { href: src, target: "_blank", rel: "noopener" }, "Abrir la vacante"));
+    const pdf = safeUrl(d.cv_pdf_url); if (pdf) row("Hoja de vida", el("a", { href: pdf, target: "_blank", rel: "noopener" }, "Ver el PDF enviado"));
+    else row("Hoja de vida", d.cv_file);
+    row("Notas", d.notes);
+
+    const tl = el("ol", { class: "timeline" });
+    if (!a.events.length) tl.append(el("li", {}, el("span", { class: "note" }, "Sin historial todavía. Aparece cuando /postular, /outcome o /gmail-sync registren una etapa.")));
+    for (const e of a.events.slice().reverse()) {
+      const t = parseDate(e.ts);
+      tl.append(el("li", {}, el("time", {}, t != null ? fmtDate(t) : str(e.ts)), el("strong", {}, LABEL[e.etapa]),
+        str(e.detalle) ? el("span", {}, str(e.detalle)) : null, el("span", { class: "note" }, "Fuente: " + str(e.fuente))));
+    }
+
+    const sel = el("select", { id: "move-etapa", "aria-label": "Nueva etapa" });
+    for (const [k, label] of ETAPAS) { const o = el("option", { value: k }, label); if (k === a.etapa) o.selected = true; sel.append(o); }
+    const msg = el("span", { class: "note", role: "status" });
+    const btn = el("button", { class: "btn", type: "button" }, "Mover");
+    btn.addEventListener("click", async () => {
+      const etapa = sel.value;
+      if (etapa === a.etapa) { msg.textContent = "Ya está en esa etapa."; return; }
+      btn.disabled = true; msg.textContent = "Guardando…";
+      const ev = { ts: isoNow(), etapa, status: STATUS[etapa], fuente: "manual", detalle: "Cambio hecho desde el tablero", ref: "" };
+      try {
+        await db.doc("postulaciones/" + id).update({ events: [...a.events, ev], etapa, status: STATUS[etapa], updated_at: ev.ts, updated_by: "dashboard" });
+        msg.textContent = "Guardado. Tus computadores lo reciben en el próximo /sincronizar.";
+      } catch (err) {
+        msg.textContent = err && err.code === "permission_denied" ? "Solo tú puedes mover etapas en este tablero." : "No se pudo guardar. Revisa tu conexión e inténtalo de nuevo.";
+      } finally { btn.disabled = false; }
+    });
+
+    const sheet = el("aside", { class: "sheet", role: "dialog", "aria-label": str(d.company) },
+      el("button", { class: "close", type: "button", on: { click: closeSheet } }, "Cerrar"),
+      el("div", {}, el("h2", {}, str(d.company) || "Empresa sin nombre"), el("p", { class: "sub" }, str(d.role))),
+      info,
+      el("div", { style: "display:grid;gap:8px" }, el("h3", {}, "Mover a otra etapa"), el("div", { class: "move" }, sel, btn), msg),
+      el("div", { style: "display:grid;gap:10px" }, el("h3", {}, "Historial"), tl));
+    document.body.append(el("div", { class: "scrim", on: { click: closeSheet } }), sheet);
+    btn.disabled = !db;
+  }
+
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeSheet(); });
+  $("q").addEventListener("input", render);
+  $("sort").addEventListener("change", render);
+  render();
+
+  (async () => {
+    const status = $("status");
+    db = await window.claude?.use?.("db");
+    if (!db) { status.textContent = "Abre este tablero con tu cuenta de Claude para ver tus datos."; status.className = "status warn"; return; }
+    const timer = setTimeout(() => { status.textContent = "No se pudo conectar todavía; los datos pueden estar desactualizados."; status.className = "status warn"; }, 10000);
+    db.collection("postulaciones").onSnapshot(snap => {
+      if (!snap.fromCache) { clearTimeout(timer); status.className = "status"; status.textContent = "Actualizado " + new Date().toLocaleTimeString("es-CO", { hour: "2-digit", minute: "2-digit" }); }
+      apps = snap.docs.map(s => normalize(s.id, s.data() || {}));
+      render();
+      if (openId) openSheet(openId);
+    }, err => { clearTimeout(timer); status.className = "status warn"; status.textContent = "No se pudieron leer tus datos (" + str(err && err.code) + ")."; });
+  })();
+})();
+</script>

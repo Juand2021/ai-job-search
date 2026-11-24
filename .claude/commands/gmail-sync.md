@@ -12,7 +12,7 @@ Follow these steps **in order**.
 
 ## Step 0: Prerequisites
 
-Confirm the Gmail MCP tools (`mcp__claude_ai_Gmail__*`) are available. If not, tell the user to connect the Gmail integration (claude.ai Settings → Connectors → Gmail) and stop - do not attempt this via Bash, IMAP, or any other channel.
+Confirm the Gmail MCP tools are available. Their prefix depends on where the connector was added: `mcp__claude_ai_Gmail__*` in the Claude Code CLI, `mcp__Gmail__*` in the Claude app and cloud sessions; any one of them is fine, and they may be deferred (load them with tool search first). If not, tell the user to connect the Gmail integration (claude.ai Settings → Connectors → Gmail) and stop - do not attempt this via Bash, IMAP, or any other channel.
 
 ---
 

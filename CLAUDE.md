@@ -1,10 +1,10 @@
-# Job Application Assistant for [YOUR_NAME]
+# Job Application Assistant for Juan Diego Chaves Guerrero
 
 <!-- SETUP: This file is populated by running /setup -->
 <!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Juan Diego Chaves Guerrero, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +13,75 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+<!-- Populated on 2026-11-24 from 3_Hoja_de_Vida.pdf (the candidate's one-page English CV).
+Lines marked "PENDIENTE" are not in the CV and must be confirmed by Juan Diego before /apply relies on them. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Juan Diego Chaves Guerrero
+- **Location:** Bogotá, Colombia (PENDIENTE: confirmar modalidad aceptada - presencial, híbrido o remoto - y si aceptaría otra ciudad)
+- **Phone:** +57 316 258 8234
+- **Email:** juand.chavesg@gmail.com
+- **LinkedIn:** https://linkedin.com/in/Juan-Diego-Chaves-guerrero
+- **GitHub:** https://github.com/Juand2021
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | Spanish | Native |
+  | English | B2 |
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Status:** Systems Engineering student (9th semester, Universidad Jorge Tadeo Lozano), looking for junior / internship roles in software development and data
+- **LinkedIn headline:** "Systems Engineering Student · Software Developer"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **B.Sc. Systems Engineering (in progress)** (2023-present, 9th semester) - Universidad Jorge Tadeo Lozano, Bogotá
+  - Coursework: databases, data mining, AI, mobile apps, software architecture, sustainable development
+  - Admitted via homologation from SENA
+- **Technologist in IT Systems Analysis & Development / Software Programming Technician** (graduated) - SENA (Servicio Nacional de Aprendizaje), Bogotá
+  - Training in information processing, networking, data quality (SQA), and enterprise software analysis and development
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **IT Service Desk Analyst - Intern** (2022, 6 months) - **Soluciones Empresariales 360° (SOE 360)** (Bogotá, Colombia)
+  - Handled incident resolution applying ITIL best practices; registered, categorized and tracked tickets end-to-end in the incident management system
+  - Provided technical support on software and network connectivity; documented recurring solutions to reduce resolution times
+  - Performed failure analysis on information systems and IT services for clients; collaborated with the team on continuous improvement of support and operation processes
+
+### Independent Projects
+- **Planorama - Intelligent Event Recommender** (2024): web event-recommendation platform for Bogotá with a conversational interface and filters by category, location and preferences; TF-IDF engine returning relevant results in under 2 seconds; interactive geolocated event map with Folium. Python, Streamlit, TF-IDF, Pandas, Folium.
+- **HeartAttackPrevention - Cardiac Risk Predictor** (2025): predictive web app estimating heart-attack risk from health, lifestyle and demographic factors; Decision Tree trained on a large public dataset, 85.5% accuracy through data preprocessing (stack includes GridSearchCV); deployed as a web survey with personalized recommendations. Won the Universidad Jorge Tadeo Lozano Engineering Fair. Python, Scikit-learn, Decision Tree, GridSearchCV, HTML, CSS.
+- **TadIA - Android Academic Assistant** (2026): Android app for Tadeo students with authentication flows and academic module navigation; Material Design 3, clean Composable architecture, Android API 26+. Kotlin, Jetpack Compose.
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python (advanced), SQL (SQL Developer, SQL Server), Pandas, Scikit-learn, TF-IDF, Streamlit
+- **Secondary:** Java (intermediate), Kotlin + Jetpack Compose (Android), C#, JavaScript, Bootstrap, HTML/CSS
+- **Domain:** Data mining, machine learning basics, recommendation systems, mobile development, IT service management (ITIL), software quality assurance (SQA)
+- **Software:** Git / GitHub, Scrum / Kanban, Folium, Streamlit
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- None listed in the CV (PENDIENTE: añadir cursos o certificaciones si los tienes)
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Winner - Universidad Jorge Tadeo Lozano Engineering Fair (2025), with the HeartAttackPrevention project
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Self-driven and proactive** - builds end-to-end personal projects on own initiative (three shipped projects 2024-2026)
+- **Results-oriented** - reports concrete outcomes (85.5% accuracy, <2 s recommendations, fair award)
+- **Strengths:** applied Python and data work, learning new stacks quickly (from Python/data to Kotlin/Android), structured support processes (ITIL)
+- **Growth areas:** limited formal work experience (one 6-month internship); production/team-scale software experience still ahead
+- **Thrives in:** PENDIENTE (confirmar: tipo de equipo, tamaño de empresa, estilo de liderazgo)
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Artificial intelligence and machine learning
+- Data mining and turning data into useful products
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- PENDIENTE (confirmar sectores y empresas objetivo; por ejemplo tecnología, fintech, salud digital, consultoría de software en Bogotá)
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- PENDIENTE (confirmar: salario mínimo, modalidad, horario compatible con la universidad, etc.)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

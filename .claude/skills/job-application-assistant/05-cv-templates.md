@@ -66,7 +66,7 @@ A compile that stops on ``! LaTeX Error: File `<file>' not found`` (a `.sty` or 
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Juan Diego Chaves Guerrero - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -76,13 +76,13 @@ A compile that stops on ``! LaTeX Error: File `<file>' not found`` (a `.sty` or 
 \usepackage{import}
 
 % Personal data
-\name{[FIRST_NAME]}{[LAST_NAME]}
+\name{Juan Diego}{Chaves Guerrero}
 % If you have no address to list, DELETE this whole line. \address{}{}{} fails
 % with "There's no line here to end" on every moderncv version.
-\address{[YOUR_ADDRESS]}{}{}
-\phone[mobile]{[YOUR_PHONE]}
-\email{[YOUR_EMAIL]}
-\extrainfo{\href{[YOUR_LINKEDIN_URL]}{LinkedIn}, \href{[YOUR_GITHUB_URL]}{GitHub}}
+\address{Bogotá, Colombia}{}{}
+\phone[mobile]{+57 316 258 8234}
+\email{juand.chavesg@gmail.com}
+\extrainfo{\href{https://linkedin.com/in/Juan-Diego-Chaves-guerrero}{LinkedIn}, \href{https://github.com/Juand2021}{GitHub}}
 
 \begin{document}
 \makecvtitle
@@ -144,11 +144,14 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Python / data / AI roles (junior developer, data analyst, junior data scientist):**
+> Systems Engineering student (9th semester, Universidad Jorge Tadeo Lozano) and SENA-trained software technologist, passionate about AI and data mining. Builds end-to-end Python data products: a TF-IDF event recommender that returns results in under 2 seconds, and a cardiac-risk predictor (Scikit-learn, 85.5% accuracy) that won the university's Engineering Fair. Brings SQL, Pandas and Streamlit, plus the process discipline of an ITIL service-desk internship.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For software / mobile development roles (junior developer, Android developer):**
+> Systems Engineering student (9th semester) and SENA Software Programming Technician with hands-on experience across Python, Java, Kotlin, C# and SQL. Built TadIA, an Android academic assistant in Kotlin and Jetpack Compose following Material Design 3, and two Python web applications. Self-driven and results-oriented, with ITIL support experience from a 6-month service-desk internship.
+
+**For IT support / service desk roles:**
+> Systems Engineering student with a 6-month IT Service Desk internship at SOE 360: ITIL incident management, end-to-end ticket tracking, software and network-connectivity support, and documentation of recurring solutions to cut resolution times. Combines that process discipline with programming skills in Python, Java and SQL.
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

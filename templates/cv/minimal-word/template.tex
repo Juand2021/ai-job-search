@@ -1,0 +1,41 @@
+% CV template: minimal-word (see TEMPLATE.md). Placeholders only - no personal data.
+\input{preamble.tex}
+\ifpdftex\usepackage[T1]{fontenc}\fi % no-op under lualatex
+\begin{document}
+
+\begin{center}
+{\large\bfseries\atsspaces [YOUR_NAME]}\\[1pt]
+{\small [YOUR_PHONE]\ \ $|$\ \ [YOUR_EMAIL]\ \ $|$\ \ [YOUR_LINKEDIN_URL]\ \ $|$\ \ [YOUR_GITHUB_URL]}\\
+{\small [YOUR_CITY], [YOUR_COUNTRY]}\\[1pt]
+{\small\itshape\textcolor{meta}{[HEADLINE]}}
+\end{center}
+\vspace{-6pt}
+
+\section{Profile}
+[3-line profile statement tailored to the posting.]
+
+\section{Core Competencies}
+\skill{[Category]}{[skills]}
+
+\section{Work Experience}
+\entry{[Company]}{[City, Country]}{[Start -- End]}{[Job Title]}
+\begin{itemize}
+  \item {[Achievement or responsibility]}
+\end{itemize}
+
+\section{Projects}
+\entry{[Project]}{[Personal Project]}{[Year]}{[Stack]}
+\begin{itemize}
+  \item {[What it does and the result]}
+\end{itemize}
+
+\section{Education}
+\entry{[Institution]}{[City, Country]}{[Years]}{[Degree]}
+
+\section{Certifications}
+\entry{[Certification]}{[Issuer]}{[Date]}{}
+
+\section{Languages}
+[Language (level)]
+
+\end{document}

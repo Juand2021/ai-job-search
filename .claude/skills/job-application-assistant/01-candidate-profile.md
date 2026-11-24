@@ -4,8 +4,10 @@ framework_version: 1.1.1
 
 # Candidate Profile
 
-<!-- Populated on 2026-11-24 from 3_Hoja_de_Vida.pdf. Every fact below comes from that CV.
-Items marked PENDIENTE are not in the CV and need confirmation before /apply uses them. -->
+<!-- Updated 2026-11-24 from 3_Hoja_de_Vida.pdf plus Juan Diego's own answers in the project thread.
+Items marked PENDIENTE are not confirmed: never put them in a document.
+CONFIDENTIALITY: never name the internal AI project built at Periferia IT Group. Describe only
+what was built, the tools learned and the tech stack. -->
 
 ## Identity
 - **Name:** Juan Diego Chaves Guerrero
@@ -14,65 +16,82 @@ Items marked PENDIENTE are not in the CV and need confirmation before /apply use
 - **Email:** juand.chavesg@gmail.com
 - **LinkedIn:** https://linkedin.com/in/Juan-Diego-Chaves-guerrero
 - **GitHub:** https://github.com/Juand2021
-- **Status:** Systems Engineering student, 9th semester (Universidad Jorge Tadeo Lozano); Software Developer
-- **Constraints:** PENDIENTE - work mode (on-site / hybrid / remote), schedule compatibility with university classes
+- **Status:** Systems Engineering degree candidate (all coursework and internship complete; degree expected February 2027). AI Engineering Intern at Periferia IT Group until 16 December 2026.
+- **Availability:** from Monday 21 December 2026
+- **Constraints:** hybrid in Bogotá preferred; fully remote and fully on-site are also acceptable (confirmed).
 
 ### Languages
 
 | Language | Level | Notes |
 |----------|-------|-------|
 | Spanish | Native | |
-| English | B2 | As stated in the CV |
+| English | B2 | Confirmed by the candidate |
 
 ## Education
 
 | Degree | Period | Institution | Key Topics |
 |--------|--------|-------------|------------|
-| B.Sc. Systems Engineering (in progress, 9th semester) | 2023 - present | Universidad Jorge Tadeo Lozano, Bogotá | Databases, data mining, AI, mobile apps, software architecture, sustainable development. Admitted via homologation from SENA |
-| Technologist in IT Systems Analysis & Development / Software Programming Technician | Graduated (year PENDIENTE) | SENA - Servicio Nacional de Aprendizaje, Bogotá | Information processing, networking, data quality (SQA), enterprise software analysis and development |
+| B.Sc. Systems Engineering | 2023 - 2026 (coursework and internship complete; degree expected Feb 2027) | Universidad Jorge Tadeo Lozano, Bogotá | Databases, data mining, AI, mobile apps, software architecture, sustainable development. Admitted via homologation from SENA |
+| Technologist in IT Systems Analysis & Development / Software Programming Technician | Graduated 2023 (both titles, confirmed) | SENA - Servicio Nacional de Aprendizaje, Bogotá | Information processing, networking, data quality (SQA), enterprise software analysis and development |
 
 ## Professional Experience
 
+### AI Engineering Intern - Periferia IT Group (15 Jun 2026 - 16 Dec 2026)
+Bogotá, Colombia (hybrid). Part of the company's AI Tower. Spanish title: Practicante de Ingeniería de IA (confirmed).
+- Built AI-based solutions and automations for internal teams as part of the AI Tower
+- Contributed to the development of an internal AI project (confidential - never name it) and built AI automations on top of it
+- Built AI automations for the accounting, software and human-resources teams and helped those teams implement them. No time-saving claim or figure until the candidate supplies one
+- Agentic software development with Claude Code (main strength), Cursor, Google Antigravity and OpenCode (OpenCode: keep out of the competencies list), including subagents, prompt engineering, AI connections and automations
+- Connected AI agents to existing tools through MCP servers (Supabase, databases, frontend and backend development tools) and built custom MCP servers
+- Stack: Python, TypeScript, Node.js, Electron (desktop apps), Supabase, Google Firestore
+
 ### IT Service Desk Analyst - Intern - Soluciones Empresariales 360° (SOE 360) (2022, 6 months)
 Bogotá, Colombia
+- Early adopter of ChatGPT in its first months, using it to draft code and adjust IT solutions for the service desk (confirmed)
 - Handled incident resolution applying ITIL best practices; registered, categorized, and tracked tickets end-to-end in the incident management system
 - Provided technical support on software and network connectivity, reducing resolution times by documenting recurring solutions
-- Performed failure analysis in information systems and IT services for clients
-- Collaborated with the team on the continuous improvement of support and operation processes
+- Performed failure analysis in information systems and IT services for clients; collaborated on continuous improvement of support processes
 
 ## Independent Projects
 
 - **Planorama - Intelligent Event Recommender** (Personal project, 2024) - Python, Streamlit, TF-IDF, Pandas, Folium
-  - Built a web-based event recommendation platform with a conversational interface for users in Bogotá, supporting filters by category, location, and personal preferences
-  - TF-IDF recommendation engine delivering relevant results in under 2 seconds, significantly improving the discovery experience over manual search
-  - Interactive geolocated event map using Folium, letting users explore nearby plans in real time
+  - Web event recommendation platform with a conversational interface for users in Bogotá, with filters by category, location, and preferences
+  - TF-IDF recommendation engine delivering relevant results in under 2 seconds
+  - Interactive geolocated event map using Folium
 - **HeartAttackPrevention - Cardiac Risk Predictor** (Personal project, 2025) - Python, Scikit-learn, Decision Tree, GridSearchCV, HTML, CSS
-  - Built a predictive web app that estimates a user's heart attack risk based on health, lifestyle, and demographic factors, using a Decision Tree model trained on a large public dataset
-  - Achieved 85.5% accuracy through data preprocessing
-  - Won the Universidad Jorge Tadeo Lozano Engineering Fair
-  - Deployed as a web interface where users fill out a health survey and receive a personalized risk assessment with actionable lifestyle recommendations
+  - Predictive web app estimating heart attack risk from health, lifestyle, and demographic factors, using a Decision Tree trained on a large public dataset
+  - 85.5% accuracy through data preprocessing; won the Universidad Jorge Tadeo Lozano Engineering Fair
+  - Web survey that returns a personalized risk assessment with lifestyle recommendations
 - **TadIA - Android Academic Assistant** (Personal project, 2026) - Android, Kotlin, Jetpack Compose
   - Android app for Universidad Jorge Tadeo Lozano students with authentication flows and academic module navigation
-  - Modern UI following Material Design 3, with clean Composable architecture supporting maintainability and scalability across Android API 26+
+  - Material Design 3, clean Composable architecture, Android API 26+
 
 ## Technical Skills
 
-### Programming & ML
-- **Python** (advanced): Pandas, Scikit-learn, Streamlit, Folium, TF-IDF
-- **Java** (intermediate)
-- **Kotlin**: Android, Jetpack Compose
-- **C#**, **JavaScript**, **Bootstrap**, HTML, CSS
-- **SQL**: SQL Developer, SQL Server
-- Machine learning basics (Decision Tree, GridSearchCV), data mining
+### AI Engineering
+- **Generative AI / LLM systems (confirmed, current):** Retrieval-Augmented Generation (RAG), LangGraph graph-based agent workflows, vector databases, information indexing for faster retrieval. PENDIENTE: which vector database(s), and whether this work was at Periferia or in own projects
+- **AI coding agents:** Claude Code (strongest, advanced), Cursor, Google Antigravity (also OpenCode, not listed in competencies)
+- **Model Context Protocol (MCP):** connecting agents to Supabase, databases and dev tools; building custom MCP servers
+- Subagents, prompt engineering, AI integrations and automations
+- Machine learning fundamentals: Scikit-learn, Decision Tree, GridSearchCV; Microsoft certifications in AI/ML and troubleshooting agents
+- Microsoft Azure Machine Learning (certification coursework only, not production)
 
-### Domain Expertise
-- Data mining and recommendation systems
-- Mobile development (Android)
-- IT service management (ITIL) and technical support
-- Software quality assurance (SQA)
+### Programming
+- **Python** (advanced): Pandas, Scikit-learn, Streamlit, Folium
+- **TypeScript**, **Node.js**, **Electron**
+- **Java** (intermediate), **Kotlin** + Jetpack Compose, **C#**, **JavaScript**, Bootstrap, HTML, CSS
 
-### Software & Tools
+### Data
+- Supabase, Google Firestore, SQL (SQL Server, SQL Developer)
+- Data mining, recommendation systems (TF-IDF)
+
+### Tools & Methodologies
 - Git / GitHub, Scrum / Kanban, ITIL, SQA
+
+## Certifications
+- Building Intelligent Troubleshooting Agents - Microsoft - Nov 2026 - credential ID NU5OU5TY6151
+- AI and Machine Learning Algorithms and Techniques - Microsoft - Nov 2026 - credential ID PKTPLM48L1XV (skills: machine learning algorithms, supervised learning)
+- Foundations of AI and Machine Learning - Microsoft - Nov 2026 - credential ID XCCCV5SKK18L (skills: Microsoft Azure Machine Learning, artificial intelligence)
 
 ## Publications
 None.
@@ -81,6 +100,4 @@ None.
 - Winner - Universidad Jorge Tadeo Lozano Engineering Fair (2025), HeartAttackPrevention project
 
 ## References
-PENDIENTE - none listed in the CV.
-
-References available upon request.
+None provided. References available upon request.

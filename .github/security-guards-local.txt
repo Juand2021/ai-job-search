@@ -1,0 +1,2 @@
+# Fork-local negations (see tools/security_guards.py LOCAL_NEGATIONS_FILE)
+!cv/main_example_es.tex

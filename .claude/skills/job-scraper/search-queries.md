@@ -29,108 +29,90 @@ Queries are grouped by priority and written in both of the candidate's working l
 
 Plain terms blocks are what portal CLIs consume (one term per line, no `OR`, no `site:`, no location). WebSearch-only blocks are Google syntax for the fallback path.
 
-### Priority 1: Python / data / AI development
+### Priority 1: AI Engineer (primary target)
 
-Strongest direction: the candidate's advanced Python, data mining and ML projects, and stated passion for AI.
+The candidate's confirmed target (2026-11-24): AI Engineer at analyst / junior professional level. Never internships, apprenticeships or semilleros.
 
 #### Plain terms (portal CLIs)
 
 ```
-Desarrollador Python junior
-Analista de datos junior
-Científico de datos junior
-Practicante ingeniería de sistemas
-Junior Python Developer
-Junior Data Analyst
-Junior Data Scientist
-Machine Learning intern
+Ingeniero de Inteligencia Artificial
+Ingeniero IA
+Desarrollador IA
+Ingeniero de automatización con IA
+AI Engineer
+Junior AI Engineer
+Generative AI Engineer
+LLM Engineer
+AI Automation Engineer
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:co.computrabajo.com "desarrollador python" Bogotá
-site:co.computrabajo.com "analista de datos" junior Bogotá
-site:elempleo.com "python" junior Bogotá
-site:magneto365.com "analista de datos" Bogotá
-site:linkedin.com/jobs "junior python developer" Colombia
-site:linkedin.com/jobs "data analyst" junior Bogotá
-site:linkedin.com/jobs "machine learning" intern Colombia
+site:co.computrabajo.com "ingeniero de inteligencia artificial" Bogotá
+site:co.computrabajo.com "inteligencia artificial" desarrollador Bogotá
+site:elempleo.com "inteligencia artificial" ingeniero Bogotá
+site:magneto365.com "inteligencia artificial" Bogotá
+site:linkedin.com/jobs "AI Engineer" Bogotá
+site:linkedin.com/jobs "Ingeniero de IA" Colombia
+site:linkedin.com/jobs "Generative AI" engineer Colombia
 ```
 
-### Priority 2: Software and mobile development
+### Priority 2: DevOps / cloud with AI (Azure)
 
-The candidate's programming range (Java, Kotlin, C#, JavaScript, SQL) and the TadIA Android project.
+Also of interest, always AI-related: DevOps with AI, AI deployment on Azure.
 
 #### Plain terms (portal CLIs)
 
 ```
-Desarrollador de software junior
-Desarrollador Android junior
-Desarrollador Java junior
-Practicante desarrollo de software
-Junior Software Developer
-Junior Android Developer
+Ingeniero DevOps IA
+Ingeniero cloud Azure IA
+MLOps Engineer
+AI DevOps Engineer
+Azure AI Engineer
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:co.computrabajo.com "desarrollador de software" junior Bogotá
-site:co.computrabajo.com "desarrollador android" Bogotá
-site:elempleo.com "desarrollador" junior Bogotá
-site:linkedin.com/jobs "junior software developer" Bogotá
-site:linkedin.com/jobs "android developer" junior Colombia
+site:co.computrabajo.com "DevOps" "inteligencia artificial" Bogotá
+site:linkedin.com/jobs "MLOps" Bogotá
+site:linkedin.com/jobs "Azure AI" engineer Colombia
+site:elempleo.com "Azure" "inteligencia artificial" Bogotá
 ```
 
-### Priority 3: Data quality, QA and databases
+### Priority 3: Software development with AI agents
 
-Adjacent roles using SQA training and SQL.
+Developer roles whose core is AI: agents, LLM integrations, MCP, automation (Python, TypeScript, Node.js).
 
 #### Plain terms (portal CLIs)
 
 ```
-Analista QA junior
-Analista de pruebas de software
-Analista de bases de datos junior
-Junior QA Analyst
+Desarrollador Python IA
+Desarrollador de agentes IA
+Python AI Developer
+LLM Developer
 ```
 
 #### WebSearch-only (`site:` fallback)
 
 ```
-site:co.computrabajo.com "analista QA" junior Bogotá
-site:elempleo.com "analista de pruebas" Bogotá
-site:linkedin.com/jobs "QA analyst" junior Bogotá
+site:co.computrabajo.com "python" "inteligencia artificial" Bogotá
+site:linkedin.com/jobs "AI developer" python Bogotá
+site:linkedin.com/jobs "LLM" developer Colombia
 ```
 
-### Priority 4: IT support / service desk (wider net)
+## Excluded (deal-breakers, confirmed by the candidate)
 
-Direct experience from the SOE 360 internship; useful as a fallback while studying.
-
-#### Plain terms (portal CLIs)
-
-```
-Analista mesa de ayuda
-Analista de soporte TI
-IT Service Desk Analyst
-```
-
-#### WebSearch-only (`site:` fallback)
-
-```
-site:co.computrabajo.com "mesa de ayuda" Bogotá
-site:elempleo.com "soporte TI" Bogotá
-site:linkedin.com/jobs "service desk" Bogotá
-```
+Drop these from results before scoring: service desk / mesa de ayuda / soporte TI roles, internships (práctica, practicante), apprenticeship programs (aprendiz SENA), semilleros, trainee programs, and roles not related to AI. Banks and large non-software corporations are not excluded, only ranked lower.
 
 ## Location Filter
 
-Home base: Bogotá, Colombia (PENDIENTE: confirm commute limits and remote preference).
-- Bogotá (ideal)
-- Remote from Colombia (acceptable)
-- Chía, Cota, Funza, Mosquera, Soacha (borderline - check commute)
-- Other cities requiring relocation (too far unless confirmed otherwise)
+Home base: Bogotá, Colombia. Hybrid in Bogotá is the ideal (confirmed).
+- Bogotá, hybrid (ideal)
+- Bogotá, fully on-site, or fully remote (acceptable - confirmed by the candidate; rank slightly below hybrid)
+- Other cities requiring relocation (FLAG - relocation not yet confirmed by the candidate)
 
 ## Language Filter
 

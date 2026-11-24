@@ -4,6 +4,20 @@ framework_version: 1.4.9
 
 # CV Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `minimal-word`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/minimal-word/template.tex` — use this as the structural reference instead of the stock template; the master CVs `cv/main_example.tex` (English) and `cv/main_example_es.tex` (Spanish) are complete filled examples
+> - **Manifest:** `templates/cv/minimal-word/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Source extension:** `.tex`
+> - **Compile command:** `rm -f <file>.pdf && mkdir -p build && lualatex -interaction=nonstopmode -output-directory=build <file>.tex && mv build/<file>.pdf ./` (not the command named in the stock guidance below — `/apply`'s compile step must use this instead). Run it from the output directory (`cv/`). The log is in `build/`, and `/apply`'s Step 5e cleanup must delete that `build/` folder too
+> - **Fonts:** Calibri through fontspec on Windows; Carlito (metric-compatible clone) elsewhere
+> - **Page limit:** exactly 1 page(s)
+> - **Output file:** `cv/main_<company>_<role>.tex`; it does `\input{preamble.tex}`, which already lives in `cv/`
+<!-- END ACTIVE-TEMPLATE -->
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -12,7 +26,7 @@ All CVs use the moderncv LaTeX package with the "banking" style and "blue" color
 
 **Output file:** `cv/main_<company>_<role>.tex`
 **Compile with:** **lualatex** on MiKTeX/TeX Live. pdflatex often fails on modern MiKTeX installs with `fontawesome5` font-expansion errors; lualatex handles the same sources cleanly.
-**Master reference:** `cv/main_example.tex` (comprehensive CV with all competencies, experience, and achievements - use as source when building targeted CVs)
+**Master reference:** `cv/main_example.tex` (English) and `cv/main_example_es.tex` (Spanish) - comprehensive CVs with all competencies, experience, and achievements. Start a tailored CV from the master in the posting's language (Spanish posting -> `main_example_es.tex`, otherwise `main_example.tex`); both carry the same facts, so a change to one must be made in the other too.
 
 ### Compile command
 
@@ -20,7 +34,7 @@ All CVs use the moderncv LaTeX package with the "banking" style and "blue" color
 cd cv && lualatex -interaction=nonstopmode main_<company>_<role>.tex
 ```
 
-Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. Any page count other than 2 is a failure that must be fixed before presenting to the user.
+Expected output: `Output written on main_<company>_<role>.pdf (1 page, ...)`. The candidate set a **1-page** CV limit (CLAUDE.md, `CV page limit`). Any page count other than 1 is a failure that must be fixed before presenting to the user.
 
 ### Missing LaTeX packages
 
@@ -144,14 +158,16 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For Python / data / AI roles (junior developer, data analyst, junior data scientist):**
-> Systems Engineering student (9th semester, Universidad Jorge Tadeo Lozano) and SENA-trained software technologist, passionate about AI and data mining. Builds end-to-end Python data products: a TF-IDF event recommender that returns results in under 2 seconds, and a cardiac-risk predictor (Scikit-learn, 85.5% accuracy) that won the university's Engineering Fair. Brings SQL, Pandas and Streamlit, plus the process discipline of an ITIL service-desk internship.
+**For AI Engineer roles (primary target):**
+> AI Engineer focused on agentic development, RAG and AI automation, with AI solutions built for internal teams in the AI Tower at Periferia IT Group. Advanced Claude Code user; builds LangGraph agent workflows and connects agents to real systems through MCP. Systems Engineer (Universidad Jorge Tadeo Lozano) with three Microsoft AI/ML certifications.
 
-**For software / mobile development roles (junior developer, Android developer):**
-> Systems Engineering student (9th semester) and SENA Software Programming Technician with hands-on experience across Python, Java, Kotlin, C# and SQL. Built TadIA, an Android academic assistant in Kotlin and Jetpack Compose following Material Design 3, and two Python web applications. Self-driven and results-oriented, with ITIL support experience from a 6-month service-desk internship.
+**For DevOps / cloud roles with AI (Azure):**
+> AI Engineer with hands-on agentic development and AI automation experience (Claude Code, MCP, LangGraph, RAG; Python, TypeScript, Node.js, Supabase, Firestore) from the AI Tower at Periferia IT Group. Microsoft certifications in AI and machine learning, including Azure Machine Learning foundations. Looking to bring AI engineering into DevOps and cloud deployment.
 
-**For IT support / service desk roles:**
-> Systems Engineering student with a 6-month IT Service Desk internship at SOE 360: ITIL incident management, end-to-end ticket tracking, software and network-connectivity support, and documentation of recurring solutions to cut resolution times. Combines that process discipline with programming skills in Python, Java and SQL.
+**Spanish version, Ingeniero de IA:**
+> Ingeniero de IA enfocado en desarrollo agéntico, RAG y automatización con IA, con soluciones de IA creadas para equipos internos en la AI Tower de Periferia IT Group. Uso avanzado de Claude Code; construye flujos de agentes con LangGraph y conecta agentes a sistemas reales mediante MCP. Ingeniero de Sistemas (Universidad Jorge Tadeo Lozano) con tres certificaciones de Microsoft en IA y machine learning.
+
+Never claim time savings or a metric for the Periferia automations until the candidate supplies one. "Systems Engineer" wording: see the open question in the thread (degree conferral is February 2027).
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -254,7 +270,7 @@ Related trap: a bullet whose text begins with a literal `[` must be braced - `\i
 After writing the CV and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean. Workflow:
 
 1. Run `lualatex -interaction=nonstopmode main_<company>_<role>.tex` (a missing `.sty`/`.cls`: see **Missing LaTeX packages** above)
-2. Check the output page count: must be exactly 2
+2. Check the output page count: must be exactly 1 (the candidate's limit)
 3. Read the PDF via the Read tool and visually inspect both pages
 4. Check for **orphaned entries**: a `\cventry` title line must never sit alone at the bottom of page 1 with its bullets on page 2
 
@@ -324,21 +340,21 @@ Two independent causes, both easy to avoid:
 
 **Cause 1 is mechanical in step 5d**: `python3 tools/verify_pdf.py cv/main_<company>_<role>.pdf --ascii-dates` scans the raw text layer for a year joined to a Unicode dash and exits 1 naming each hit with its code point (`U+2013 in 'Role Title 2016–2024'`). It deliberately reads the raw layer: the fold that lets `--contains "2016-2024"` match what the template renders maps that same en-dash back to `-`, so `--contains` can never see this. A year on either side of the dash is enough, so `Mar 2016 – Jul 2016` and `2016 – Present` are caught too; a numeric range with no year (`EUR 600k–1M`) is left alone. **Cause 2 stays a read-through check**: after extracting the text layer, confirm every experience entry shows a start *and* an end. Because both failures are silent and invisible in the PDF, the candidate otherwise discovers them only while filling in the application form.
 
-## Page Budget - Hard 2-Page Limit
+## Page Budget - Hard 1-Page Limit
 
-The CV **must** fit on exactly 2 pages when compiled. Use these content limits as a guide:
+The candidate set a 1-page CV (CLAUDE.md, `CV page limit: 1`). The CV **must** fit on exactly 1 page when compiled. Use these content limits as a guide:
 
 | Section | Max budget |
 |---------|-----------|
-| Profile statement | 3-4 lines |
-| Skills | 5 items, each 1-2 lines |
-| Most recent role | 4-5 bullets |
-| Previous role | 2-3 bullets |
-| Older roles | 2 bullets (1 line each) |
-| Education | 2-3 entries |
-| Publications | 2-3 entries |
-| Awards | 3 entries, single line each |
-| References | "Available upon request." (single line) |
+| Profile statement | 3 lines |
+| Skills | 4 items, 1 line each |
+| Most recent role | 4 bullets |
+| Previous role | 1-2 bullets |
+| Projects | 2-3 entries, 1 line each, most relevant to the posting first |
+| Education | 2 entries, 1 line of detail at most |
+| Certifications | one line each, or one combined line |
+| Languages + Awards | one line each |
+| References | omit the section (one page has no room); "available upon request" is assumed |
 
 **If in doubt, cut rather than squeeze.** Reducing `\vspace` or geometry scale to force-fit content makes the CV look cramped.
 
@@ -367,7 +383,7 @@ Cut the lowest-total-score line first, regardless of which section it sits in.
 
 - Do not mechanically cut from the bottom of a static section list without checking relevance. "Cut the oldest role first" is wrong if that role is literally about the skill the posting asks for.
 - Do not cut the one concrete example the cover letter leans on. Relevance is measured against the cover letter you wrote, not just the job posting — interviewers will have read both.
-- Do not cut to fit if the fit is borderline (2.02 pages). Prefer `\enlargethispage{2-3\baselineskip}` on a late section for near-misses; reserve content cuts for genuine overflow (content on page 3 that is more than a single trailing section).
+- Do not cut to fit if the fit is borderline (1.02 pages). Prefer `\enlargethispage{2-3\baselineskip}` on a late section for near-misses; reserve content cuts for genuine overflow (content on page 2 that is more than a single trailing line).
 
 ## Recommended Section Order
 

@@ -16,26 +16,35 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 <!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+<!-- Built on 2026-11-24 from the CV. The S/T/A/R facts below are only what the CV states; details marked PENDIENTE need Juan Diego's own account before an interview. -->
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 1. HeartAttackPrevention (machine learning, delivering a complete product)
+**S:** Personal project (2025): people rarely have a simple way to estimate their own cardiac risk from everyday health and lifestyle data.
+**T:** Build a predictive web app that estimates heart-attack risk and gives actionable recommendations.
+**A:** Preprocessed a large public dataset; trained a Decision Tree with Scikit-learn (GridSearchCV in the stack); built an HTML/CSS web survey that returns a personalized risk assessment and lifestyle recommendations. PENDIENTE: which preprocessing steps mattered most, dataset name and size.
+**R:** 85.5% accuracy; won the Universidad Jorge Tadeo Lozano Engineering Fair.
+**Use for:** "Tell me about a project you're proud of", "Describe a machine learning project end to end", "How do you validate a model?"
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### 2. Planorama (recommendation systems, user-focused performance)
+**S:** Personal project (2024): finding events in Bogotá meant searching manually across sources.
+**T:** Build a platform that recommends relevant events by category, location and personal preferences.
+**A:** Built a TF-IDF recommendation engine in Python with Pandas, a conversational Streamlit interface, and an interactive geolocated map with Folium.
+**R:** Relevant results in under 2 seconds, significantly improving discovery over manual search. PENDIENTE: users or feedback, if any.
+**Use for:** "How do you approach a data problem?", "Tell me about a time you improved a user experience", "Explain a technical concept simply" (TF-IDF)
+
+### 3. TadIA (learning a new stack, mobile development)
+**S:** Personal project (2026): Tadeo students needed one app for authentication and academic modules.
+**T:** Build an Android academic assistant with a maintainable architecture.
+**A:** Built it in Kotlin with Jetpack Compose, following Material Design 3 and a clean Composable architecture targeting Android API 26+. PENDIENTE: how long it took to learn Kotlin/Compose, current status.
+**R:** Working app with authentication flows and academic module navigation. PENDIENTE: users or adoption.
+**Use for:** "Tell me about a time you learned a new technology quickly", "How do you structure code for maintainability?"
+
+### 4. SOE 360 service desk (process discipline, teamwork)
+**S:** 6-month IT Service Desk internship at Soluciones Empresariales 360° (2022), supporting clients' software and network connectivity.
+**T:** Resolve incidents under ITIL practices and keep tickets tracked end to end.
+**A:** Registered, categorized and tracked tickets; performed failure analysis on information systems and IT services; documented recurring solutions; collaborated with the team on improving support processes.
+**R:** Documented recurring solutions reduced resolution times. PENDIENTE: any number (tickets per week, time saved).
+**Use for:** "Tell me about a time you improved a process", "How do you handle a frustrated user?", "Describe working in a team"
 
 <!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
 

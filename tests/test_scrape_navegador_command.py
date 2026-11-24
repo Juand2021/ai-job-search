@@ -55,3 +55,28 @@ def test_scrape_state_accepts_browser_source(tmp_path):
     with contextlib.redirect_stdout(io.StringIO()):
         assert scrape_state.run(args) == 0
     assert "Analista" in state.read_text(encoding="utf-8")
+
+
+def test_target_and_exclusions_follow_the_candidate_profile():
+    step2 = CMD.split("## Step 2", 1)[1].split("## Step 3", 1)[0]
+    assert "**IA**" in step2 and "MLOps" in step2 and "Azure" in step2
+    for excluded in ("mesa de servicio", "soporte TI", "practicante", "aprendiz SENA", "semilleros", "trainee", "3.000.000 COP"):
+        assert excluded in step2
+    assert "no las guardes en `seen_jobs.json`" in step2
+
+
+def test_companies_are_visited_by_priority_and_software_first():
+    import pytest
+    yaml = pytest.importorskip("yaml")
+
+    assert "(`alta`, luego `media`, luego `baja`)" in CMD
+    data = yaml.safe_load((ROOT / "job_scraper" / "companies.yaml").read_text(encoding="utf-8"))
+    rank = {"alta": 0, "media": 1, "baja": 2}
+    prios = [rank[c["priority"]] for c in data["companies"]]
+    assert prios == sorted(prios)
+    for c in data["companies"]:
+        assert c["enabled"] in (True, False)
+        assert c["careers_url"].startswith("https://")
+    by_name = {c["name"]: c for c in data["companies"]}
+    assert by_name["Teleperformance Colombia"]["enabled"] is False
+    assert by_name["Bancolombia"]["priority"] == "baja"

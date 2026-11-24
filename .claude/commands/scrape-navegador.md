@@ -23,9 +23,10 @@ Responde al usuario en español.
 
 ## Step 2: Plan de la corrida
 
-1. Lee `job_scraper/companies.yaml`. Cada entrada tiene `name`, `sector`, `careers_url`, `ats`, `list_url`, `json_endpoint`, `login_required`, `robots`, `early_career`, `enabled`. Salta las que tengan `enabled: false` o `login_required: true`.
-2. Lee los términos de búsqueda en texto plano de `.claude/skills/job-scraper/search-queries.md` (bloques "Plain terms"). Son el filtro de títulos: una vacante entra si su título o su área coincide con alguno de esos términos o con sus sinónimos obvios (practicante, aprendiz SENA, pasante, junior, analista, desarrollador, datos, QA, soporte TI), y está en Bogotá, en Colombia remoto o en modalidad remota abierta a Colombia.
-3. Antes de abrir cada sitio, revisa su `robots.txt` con `python3 tools/robots_check.py "<URL que vas a abrir>"`. Si lo prohíbe, salta el sitio y anótalo. Usa `python` en vez de `python3` en Windows: una instalación de python.org no trae `python3`, y ese nombre abre el alias de Microsoft Store.
+1. Lee `job_scraper/companies.yaml`. Cada entrada tiene `name`, `sector`, `careers_url`, `ats`, `list_url`, `json_endpoint`, `login_required`, `robots`, `priority`, `enabled`. Salta las que tengan `enabled: false` o `login_required: true`, y recórrelas en orden de `priority` (`alta`, luego `media`, luego `baja`): las empresas de software y tech van primero y los bancos y corporaciones al final. Si la corrida se corta, que se corte en las de prioridad baja.
+2. Lee los términos de búsqueda en texto plano de `.claude/skills/job-scraper/search-queries.md` (bloques "Plain terms") y su sección de excluidos. Son el filtro de títulos: una vacante entra si su título o su área es de **IA** (ingeniero de IA, IA generativa, LLM, agentes, automatización con IA, ML) o de **DevOps, cloud o MLOps ligado a IA** (Azure en especial), a nivel analista, junior o profesional, y está en Bogotá, en Colombia remoto o en modalidad remota abierta a Colombia.
+3. **Descarta antes de guardar**, aunque la empresa sea de prioridad alta: mesa de servicio, mesa de ayuda o soporte TI; prácticas, practicante, pasantía; aprendiz SENA y semilleros; programas trainee; cargos sin relación con IA; y vacantes cuyo salario publicado esté por debajo de 3.000.000 COP al mes (si no publican salario, no la descartes por eso). Cuenta cuántas descartaste por cada motivo para el informe; no las guardes en `seen_jobs.json`.
+4. Antes de abrir cada sitio, revisa su `robots.txt` con `python3 tools/robots_check.py "<URL que vas a abrir>"`. Si lo prohíbe, salta el sitio y anótalo. Usa `python` en vez de `python3` en Windows: una instalación de python.org no trae `python3`, y ese nombre abre el alias de Microsoft Store.
 
 ## Step 3: Leer las vacantes
 
@@ -44,7 +45,7 @@ Si la entrada trae `json_endpoint` y es un GET (Greenhouse `boards-api`, Lever `
 
 ### 3c. Portales
 
-- **Computrabajo, elempleo, Magneto:** abre la búsqueda con cada término prioritario y Bogotá, y lee los resultados igual que en 3b.
+- **Computrabajo, elempleo, Magneto:** abre la búsqueda con los términos de la prioridad 1 (IA) y luego la 2 (DevOps o cloud con IA) junto con Bogotá, y lee los resultados igual que en 3b.
 - **LinkedIn:** sus condiciones de uso prohíben la extracción automatizada y puede restringir la cuenta. Solo si el usuario ya inició sesión en el navegador integrado, abre como máximo 3 páginas de resultados de empleo por corrida, sin abrir perfiles ni mensajes. Si aparece un CAPTCHA, un aviso de actividad inusual o una pantalla de inicio de sesión, detente en LinkedIn por esta corrida y díselo. Recuérdale que las alertas de empleo de LinkedIn también llegan por correo, y `/gmail-sync` las ve.
 
 ### 3d. Bloqueos
@@ -62,7 +63,8 @@ Ante un CAPTCHA, un muro de inicio de sesión o un error repetido: no reintentes
 
 En español, breve:
 
-- Una tabla con las vacantes nuevas guardadas (empresa, cargo, ubicación, encaje rápido, enlace), con las de encaje alto primero.
+- Una tabla con las vacantes nuevas guardadas (empresa, cargo, ubicación, salario si lo publican, encaje rápido, enlace), con las de encaje alto y empresas de prioridad alta primero.
+- Cuántas vacantes descartaste y por qué motivo (Step 2.3), sin listarlas una por una.
 - Los sitios saltados y por qué (robots, inicio de sesión, CAPTCHA, acceso negado, sin navegador).
 - Una entrada de `companies.yaml` que no trajo nada en 3 corridas seguidas puede tener la URL vieja: sugiere revisarla.
 - Siguiente paso: `/rank` para ordenarlas y luego `/postular buscar`, o `/postular <link>` para una en particular.

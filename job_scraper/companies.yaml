@@ -1,45 +1,11 @@
-# Target employers for /scrape-navegador (Bogotá, junior / practicante / aprendiz SENA in
-# software, data, QA and IT support). Verified 2026-11-24 by opening each careers page;
-# "inferred" notes mark what was not directly observed. Order = priority for this profile.
+# Target employers for /scrape-navegador. Candidate target (2026-11-24): AI Engineer, then
+# DevOps / cloud / MLOps with AI (Azure), analyst or junior level. Never internships,
+# apprenticeships, semilleros or service desk. Priority: software and tech companies first
+# (alta), then IT services (media), then banks and large non-software corporations (baja).
+# Verified 2026-11-24 by opening each careers page; "inferred" marks what was not observed.
 # enabled: false keeps an entry on file without scraping it. Re-check URLs that return
 # nothing for 3 runs in a row.
 companies:
-  - name: Bancolombia
-    sector: banca
-    careers_url: https://empleo.grupobancolombia.com/bancolombia/viewalljobs/
-    ats: SAP SuccessFactors (inferred from URL patterns)
-    list_url: https://empleo.grupobancolombia.com/bancolombia/go/aprendices-tecnicos-tecnologos-bancolombia/8132200/
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Aprendices SENA y practicantes en tecnología y ciencia de datos. robots_check decide en cada corrida.
-
-  - name: Davivienda
-    sector: banca
-    careers_url: https://www.magneto365.com/co/empresas/davivienda/empleos
-    ats: Magneto365 (canal observado; enlace desde davivienda.com no confirmado)
-    list_url: null
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Practicante Universitario 2027-I y Semillero Aprendices SENA en Bogotá.
-
-  - name: Scotiabank Colpatria (ScotiaTech)
-    sector: banca / hub tecnológico
-    careers_url: https://jobs.scotiabank.com/search/?q=&locationsearch=Bogota
-    ats: SAP SuccessFactors
-    list_url: https://jobs.scotiabank.com/search/?q=&locationsearch=Bogota
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Roles Associate de software, datos y soporte en Bogotá; programa de prácticas Velocity (inglés B2+).
-
   - name: Nu Colombia
     sector: fintech
     careers_url: https://nu.com/es/carreras/ubicaciones/colombia
@@ -48,93 +14,10 @@ companies:
     json_endpoint: https://api.ashbyhq.com/posting-api/job-board/nubank
     login_required: false
     robots: unknown
-    early_career: true
+    priority: alta
     enabled: true
-    notes: Prácticas en Software Engineering y Business Analytics; la convocatoria 2026 cerró en marzo. Pide inglés avanzado.
+    notes: Fintech de software con roles de ingeniería y datos en Bogotá; feed JSON de Ashby. Ignorar su programa de prácticas.
 
-  - name: Ecopetrol
-    sector: energía
-    careers_url: https://jobs.ecopetrol.com.co/
-    ats: SAP SuccessFactors
-    list_url: https://jobs.ecopetrol.com.co/viewalljobs/
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Convocatoria semestral de practicantes (310 cupos 2026-II, cerró en abril). Próxima ventana probable feb-abr 2027.
-
-  - name: Grupo Aval (Talento Aval)
-    sector: banca (Banco de Bogotá, Occidente, Popular, AV Villas, Porvenir)
-    careers_url: https://www.talentoaval.com.co/home
-    ats: portal propio
-    list_url: https://www.talentoaval.com.co/buscar-vacantes
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Categorías TI y Talento joven. El listado carga con JavaScript; necesita el navegador.
-
-  - name: IBM Colombia
-    sector: tecnología / consultoría
-    careers_url: https://www.ibm.com/careers/search?field_keyword_05%5B0%5D=Columbia
-    ats: Avature
-    list_url: null
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: El filtro de IBM escribe "Columbia". Programa Apprentice SENA en Bogotá visto solo en un espejo.
-
-  - name: Accenture Colombia
-    sector: consultoría / servicios TI
-    careers_url: https://www.accenture.com/co-es/careers/jobsearch
-    ats: Workday
-    list_url: https://accenture.wd103.myworkdayjobs.com/AccentureCareers
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Vacantes Early Career y Aprendices SENA (visto en agregador). Filtrar Colombia en Workday.
-
-  - name: Endava
-    sector: servicios TI
-    careers_url: https://careers.smartrecruiters.com/Endava
-    ats: SmartRecruiters
-    list_url: https://www.endava.com/careers/early-careers/internship-programmes/colombia
-    json_endpoint: null
-    login_required: false
-    robots: unknown
-    early_career: true
-    enabled: true
-    notes: Prácticas de 6 meses (Java, .NET, Android, datos, QA); cerrado ahora.
-
-  - name: Claro Colombia
-    sector: telecomunicaciones
-    careers_url: https://www.magneto365.com/co/empresas/claro-colombia/empleos
-    ats: Magneto365 (alianza Claro-Magneto)
-    list_url: null
-    json_endpoint: null
-    login_required: false
-    robots: allowed
-    early_career: true
-    enabled: true
-    notes: Analista de datos y automatización (Bogotá) y practicantes de Ingeniería de Sistemas.
-
-  - name: Minsait (Indra) Colombia
-    sector: servicios TI / consultoría
-    careers_url: https://www.careers-page.com/minsait
-    ats: Manatal
-    list_url: null
-    json_endpoint: null
-    login_required: false
-    robots: unknown
-    early_career: true
-    enabled: true
-    notes: Indra Colombia también publica en elempleo (Practicante Data Analytics, Bogotá).
 
   - name: Rappi
     sector: tecnología
@@ -144,9 +27,10 @@ companies:
     json_endpoint: null
     login_required: false
     robots: allowed
-    early_career: unknown
+    priority: alta
     enabled: true
-    notes: Mayoría Software Engineer I/II y senior; revisar roles de entrada.
+    notes: Empresa tech colombiana; Software Engineer I/II en Bogotá. Buscar roles de IA, ML y plataforma.
+
 
   - name: Globant
     sector: servicios TI
@@ -156,9 +40,23 @@ companies:
     json_endpoint: null
     login_required: false
     robots: allowed
-    early_career: unknown
+    priority: alta
     enabled: true
-    notes: robots.txt prohíbe /search/; abrir solo /job/ y la portada.
+    notes: Servicios de software con estudio de IA; robots.txt prohíbe /search/, abrir solo /job/ y la portada.
+
+
+  - name: Endava
+    sector: servicios TI
+    careers_url: https://careers.smartrecruiters.com/Endava
+    ats: SmartRecruiters
+    list_url: https://www.endava.com/careers/early-careers/internship-programmes/colombia
+    json_endpoint: null
+    login_required: false
+    robots: unknown
+    priority: alta
+    enabled: true
+    notes: Servicios de software; revisar roles de datos, IA y cloud en Bogotá. Ignorar el programa de prácticas.
+
 
   - name: Mercado Libre
     sector: e-commerce / fintech
@@ -168,21 +66,49 @@ companies:
     json_endpoint: null
     login_required: false
     robots: unknown
-    early_career: unknown
+    priority: alta
     enabled: true
-    notes: El hub tecnológico de Colombia está sobre todo en Medellín.
+    notes: Tech grande; su hub de Colombia está sobre todo en Medellín, revisar remoto.
 
-  - name: Citi Colombia
-    sector: banca
-    careers_url: https://jobs.citi.com/location/bogota-jobs/287/3686110-3688685-3688689/4/1
-    ats: Radancy + Workday
+
+  - name: Accenture Colombia
+    sector: consultoría / servicios TI
+    careers_url: https://www.accenture.com/co-es/careers/jobsearch
+    ats: Workday
+    list_url: https://accenture.wd103.myworkdayjobs.com/AccentureCareers
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: media
+    enabled: true
+    notes: Consultoría con práctica de IA y Azure; filtrar Colombia en Workday. Ignorar Aprendices SENA.
+
+
+  - name: IBM Colombia
+    sector: tecnología / consultoría
+    careers_url: https://www.ibm.com/careers/search?field_keyword_05%5B0%5D=Columbia
+    ats: Avature
     list_url: null
     json_endpoint: null
     login_required: false
     robots: allowed
-    early_career: true
-    enabled: false
-    notes: Casi sin vacantes de tecnología en Bogotá. robots.txt prohíbe /search-jobs/.
+    priority: media
+    enabled: true
+    notes: Consultoría y cloud; el filtro de IBM escribe "Columbia". Ignorar Apprentice SENA.
+
+
+  - name: Minsait (Indra) Colombia
+    sector: servicios TI / consultoría
+    careers_url: https://www.careers-page.com/minsait
+    ats: Manatal
+    list_url: null
+    json_endpoint: null
+    login_required: false
+    robots: unknown
+    priority: media
+    enabled: true
+    notes: Servicios TI con roles de datos e IA; también publica en elempleo.
+
 
   - name: EPAM Colombia
     sector: servicios TI
@@ -192,9 +118,101 @@ companies:
     json_endpoint: null
     login_required: false
     robots: allowed
-    early_career: unknown
+    priority: media
+    enabled: true
+    notes: Servicios de software; mayoría senior, revisar roles junior de datos e IA.
+
+
+  - name: Scotiabank Colpatria (ScotiaTech)
+    sector: banca / hub tecnológico
+    careers_url: https://jobs.scotiabank.com/search/?q=&locationsearch=Bogota
+    ats: SAP SuccessFactors
+    list_url: https://jobs.scotiabank.com/search/?q=&locationsearch=Bogota
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: media
+    enabled: true
+    notes: Hub tecnológico de banco; roles Associate de software y datos. Prioridad baja frente a empresas de software.
+
+
+  - name: Bancolombia
+    sector: banca
+    careers_url: https://empleo.grupobancolombia.com/bancolombia/viewalljobs/
+    ats: SAP SuccessFactors (inferred from URL patterns)
+    list_url: https://empleo.grupobancolombia.com/bancolombia/go/aprendices-tecnicos-tecnologos-bancolombia/8132200/
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: baja
+    enabled: true
+    notes: Banco; revisar solo roles de IA, analítica avanzada o cloud, no aprendices ni practicantes.
+
+
+  - name: Davivienda
+    sector: banca
+    careers_url: https://www.magneto365.com/co/empresas/davivienda/empleos
+    ats: Magneto365 (canal observado; enlace desde davivienda.com no confirmado)
+    list_url: null
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: baja
+    enabled: true
+    notes: Banco (Magneto); hay roles de IA (AIOps, ModelOps, Platform Engineer IA) pero muchos senior. Ignorar semilleros y aprendices.
+
+
+  - name: Grupo Aval (Talento Aval)
+    sector: banca (Banco de Bogotá, Occidente, Popular, AV Villas, Porvenir)
+    careers_url: https://www.talentoaval.com.co/home
+    ats: portal propio
+    list_url: https://www.talentoaval.com.co/buscar-vacantes
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: baja
+    enabled: true
+    notes: Grupo bancario; categoría TI. El listado carga con JavaScript.
+
+
+  - name: Ecopetrol
+    sector: energía
+    careers_url: https://jobs.ecopetrol.com.co/
+    ats: SAP SuccessFactors
+    list_url: https://jobs.ecopetrol.com.co/viewalljobs/
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: baja
+    enabled: true
+    notes: Energía; revisar solo roles de IA o analítica, no la convocatoria de practicantes.
+
+
+  - name: Claro Colombia
+    sector: telecomunicaciones
+    careers_url: https://www.magneto365.com/co/empresas/claro-colombia/empleos
+    ats: Magneto365 (alianza Claro-Magneto)
+    list_url: null
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: baja
+    enabled: true
+    notes: Telecomunicaciones (Magneto); roles de datos y automatización.
+
+
+  - name: Citi Colombia
+    sector: banca
+    careers_url: https://jobs.citi.com/location/bogota-jobs/287/3686110-3688685-3688689/4/1
+    ats: Radancy + Workday
+    list_url: null
+    json_endpoint: null
+    login_required: false
+    robots: allowed
+    priority: baja
     enabled: false
-    notes: Mayoría de roles senior.
+    notes: Casi sin vacantes de tecnología en Bogotá. robots.txt prohíbe /search-jobs/.
+
 
   - name: Teleperformance Colombia
     sector: BPO / soporte técnico bilingüe
@@ -204,6 +222,6 @@ companies:
     json_endpoint: null
     login_required: false
     robots: allowed
-    early_career: unknown
+    priority: baja
     enabled: false
-    notes: Solo como respaldo para soporte TI bilingüe.
+    notes: "Desactivada: soporte técnico, descartado por el candidato."

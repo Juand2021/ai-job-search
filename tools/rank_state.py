@@ -7,7 +7,7 @@ cost is paid on every run regardless of how many jobs are actually scored, and
 it grows for the life of the workspace, since seen_jobs.json is append-only by
 design and most stored entries are `skipped`.
 
-This moves the state-file traffic into code. Three subcommands:
+This moves the state-file traffic into code. Four subcommands:
 
   candidates   select the eligible entries for this run and project only the
                fields a scoring agent needs
@@ -16,6 +16,9 @@ This moves the state-file traffic into code. Three subcommands:
   apply        write scoring results back to seen_jobs.json and print the
                ranked/vetoed/expired/unreachable/gave_up rows Step 5's
                report is built from
+  shortlist    read-only: the current shortlist (ranked, not vetoed, not
+               expired, not yet in the tracker), best score first - what
+               `/postular buscar` picks its next job from
 
 Selection and projection follow Step 1's existing rules exactly (status
 filter, tracker exclusion, focus filter, `--limit`/`--all`); the write-back
@@ -32,6 +35,7 @@ Usage:
   python3 tools/rank_state.py candidates [--all] [--focus TEXT] [--limit N]
   python3 tools/rank_state.py sweep [--write] [--exclude KEY,KEY]
   python3 tools/rank_state.py apply --results results.json [--dry-run] [--now ISO-DATETIME]
+  python3 tools/rank_state.py shortlist [--top N]
 
 Both subcommands print JSON on stdout. Exit 0 on success, 1 on a usage or
 state error, or on `apply` when any result could not be written.
@@ -229,6 +233,60 @@ def cmd_candidates(args) -> int:
                 "excluded_by_tracker": skipped_tracker,
                 "total_entries": len(seen),
             },
+            indent=2,
+            ensure_ascii=False,
+        )
+    )
+    return 0
+
+
+def cmd_shortlist(args) -> int:
+    """The shortlist as /rank last left it on disk, never written to.
+
+    Same exclusions as Step 3/5: location or language FAIL is vetoed, a past
+    stored deadline is expired, and a company+role already in the tracker has
+    been applied to (or drafted) and is not offered again."""
+    _, seen = load_state(args.state)
+    excluded = tracker_pairs(args.tracker)
+    rows, excluded_by_tracker = [], 0
+    for key, entry in seen.items():
+        if entry.get("status") != "ranked":
+            continue
+        score = entry.get("rank_score")
+        if not isinstance(score, (int, float)) or isinstance(score, bool):
+            continue
+        if entry_location_verdict(entry) == "FAIL" or entry.get("language_gate") == "FAIL":
+            continue
+        deadline = parse_iso(entry.get("deadline"))
+        if deadline is not None and deadline < args.today:
+            continue
+        if (norm(entry.get("company")), norm(entry.get("title"))) in excluded:
+            excluded_by_tracker += 1
+            continue
+        rows.append(
+            {
+                "key": key,
+                "title": entry.get("title"),
+                "company": entry.get("company"),
+                "url": entry.get("url"),
+                "rank_score": score,
+                "rank_verdict": entry.get("rank_verdict"),
+                "rank_date": entry.get("rank_date"),
+                "deadline": entry.get("deadline"),
+                "location_verdict": entry_location_verdict(entry),
+                "language_gate": entry.get("language_gate"),
+            }
+        )
+    # Best score first; on a tie the sooner real deadline, then the newer ranking.
+    rows.sort(key=lambda r: str(r.get("rank_date") or ""), reverse=True)
+    rows.sort(key=lambda r: parse_iso(r.get("deadline")) or date.max)
+    rows.sort(key=lambda r: r["rank_score"], reverse=True)
+    total = len(rows)
+    if args.top > 0:
+        rows = rows[: args.top]
+    print(
+        json.dumps(
+            {"shortlisted": total, "selected": rows, "excluded_by_tracker": excluded_by_tracker},
             indent=2,
             ensure_ascii=False,
         )
@@ -559,6 +617,11 @@ def main() -> int:
     app.add_argument("--results", required=True, help="JSON array from the scoring agents")
     app.add_argument("--dry-run", action="store_true")
     app.set_defaults(func=cmd_apply)
+
+    short = sub.add_parser("shortlist", parents=[common], help="read-only: the current shortlist, best first")
+    short.add_argument("--tracker", type=Path, default=TRACKER)
+    short.add_argument("--top", type=int, default=5, help="0 for no cap")
+    short.set_defaults(func=cmd_shortlist)
 
     args = ap.parse_args()
     return args.func(args)

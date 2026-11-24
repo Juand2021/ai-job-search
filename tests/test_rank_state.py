@@ -909,5 +909,44 @@ class Unreachable(RankStateCase):
         )
 
 
+class Shortlist(RankStateCase):
+    """`/postular buscar` reads its next job from here (docs/postular.md)."""
+
+    def ranked(self, score, **over):
+        return entry(status="ranked", rank_score=score, rank_date="2026-09-01", **over)
+
+    def test_best_score_first_and_read_only(self):
+        self.write_state({
+            "low": self.ranked(55, company="Low"),
+            "high": self.ranked(80, company="High"),
+            "new": entry(company="Unscored"),
+        })
+        before = self.state.read_text(encoding="utf-8")
+        out = self.run_tool("shortlist", "--tracker", str(self.tmp / "none.csv"))
+        self.assertEqual([r["key"] for r in out["selected"]], ["high", "low"])
+        self.assertEqual(out["selected"][0]["url"], "https://example.com/job")
+        self.assertEqual(self.state.read_text(encoding="utf-8"), before)
+
+    def test_vetoed_expired_and_tracked_jobs_are_left_out(self):
+        self.write_state({
+            "loc": self.ranked(90, company="A", location_verdict="FAIL"),
+            "lang": self.ranked(90, company="B", language_gate="FAIL"),
+            "past": self.ranked(90, company="C", deadline="2026-09-01"),
+            "applied": self.ranked(90, company="Acme", title="SOC Analyst"),
+            "ok": self.ranked(60, company="D", deadline="2026-09-30", location_verdict="FLAG"),
+        })
+        tracker = self.tmp / "tracker.csv"
+        tracker.write_text("date,company,role\n2026-09-02,acme,SOC analyst\n", encoding="utf-8")
+        out = self.run_tool("shortlist", "--tracker", str(tracker))
+        self.assertEqual([r["key"] for r in out["selected"]], ["ok"])
+        self.assertEqual(out["excluded_by_tracker"], 1)
+
+    def test_top_caps_the_selection(self):
+        self.write_state({str(i): self.ranked(50 + i, company=f"C{i}") for i in range(4)})
+        out = self.run_tool("shortlist", "--top", "1", "--tracker", str(self.tmp / "none.csv"))
+        self.assertEqual([r["key"] for r in out["selected"]], ["3"])
+        self.assertEqual(out["shortlisted"], 4)
+
+
 if __name__ == "__main__":
     unittest.main()

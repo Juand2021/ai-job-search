@@ -91,6 +91,8 @@ documents/interview/**
 
 # Personal job search tracking
 job_search_tracker.csv
+# Backup written by `tools/tracker_sync.py apply` before it rewrites the tracker.
+job_search_tracker.csv.bak
 
 # Gmail sync state (message IDs, subjects - personal data)
 gmail_sync/
@@ -121,3 +123,6 @@ company_research/*.json
 
 # Brainstorm mockups (superpowers visual companion) - never ship
 .superpowers/
+
+# Pipeline settings (docs/pipeline-contract.md) - personal thresholds and preferences
+pipeline.config.json

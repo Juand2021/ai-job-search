@@ -187,8 +187,12 @@ REQUIRED_IGNORE_RULES = [
     # /interview's prep packs land under documents/applications/**, above.
     "documents/interview/**",
     "job_search_tracker.csv",
+    # Written by tools/tracker_sync.py apply (docs/pipeline-contract.md section 6).
+    "job_search_tracker.csv.bak",
     "gmail_sync/",
     "reports/",
+    # /postular and /dashboard settings (docs/pipeline-contract.md section 4).
+    "pipeline.config.json",
     "upskill/*.md",
     # Depth-independent twin of the rule above. The upskill *skill* resolves
     # `upskill/` relative to its own directory - the same observed behavior

@@ -34,7 +34,7 @@ describe only what was built, the tools learned and the tech stack. -->
 - **CV language:** match the posting - Spanish posting gets a Spanish CV, English posting gets an English CV (`cv_language: posting`)
 - **CV page limit:** 1 page (hard limit, set by the candidate)
 
-- **Status:** Systems Engineering degree candidate - all coursework and the (homologated) internship are complete; only degree conferral is pending, expected February 2027. AI Engineer intern at Periferia IT Group until 16 December 2026.
+- **Status:** Systems Engineering degree candidate - all coursework and the (homologated) internship are complete; only degree conferral is pending, expected February 2027. AI Engineering Intern at Periferia IT Group until 16 December 2026.
 - **Availability:** can start Monday 21 December 2026
 - **Experience:** about 1 year across two internships (SOE 360, 2022; Periferia IT Group, Jun-Dec 2026)
 
@@ -42,18 +42,18 @@ describe only what was built, the tools learned and the tech stack. -->
 - **B.Sc. Systems Engineering** (2023-2026; all coursework and internship completed, degree expected February 2027) - Universidad Jorge Tadeo Lozano, Bogotá
   - Coursework: databases, data mining, AI, mobile apps, software architecture, sustainable development
   - Admitted via homologation from SENA
-- **Technologist in IT Systems Analysis & Development / Software Programming Technician** (SENA internship started August 2023; graduation year PENDIENTE - candidate believes late 2023) - SENA (Servicio Nacional de Aprendizaje), Bogotá
+- **Technologist in IT Systems Analysis & Development / Software Programming Technician** (graduated 2023, both titles) - SENA (Servicio Nacional de Aprendizaje), Bogotá
 
 ### Professional Experience
-- **AI Engineer - Intern** (15 Jun 2026 - 16 Dec 2026) - **Periferia IT Group** (Bogotá, Colombia; hybrid). Exact CV title wording PENDIENTE confirmation.
+- **AI Engineering Intern** (Spanish: Practicante de Ingeniería de IA) (15 Jun 2026 - 16 Dec 2026) - **Periferia IT Group** (Bogotá, Colombia; hybrid), AI Tower
   - Member of the company's AI Tower, building AI-based solutions and automations for internal teams
   - Contributed to the development of an internal AI project (name confidential) and built AI automations on top of it
-  - AI automations significantly reduced task times for the accounting, software and human-resources teams; helped those teams adopt the new tools
-  - Agentic development with Claude Code (main strength), OpenCode, Cursor and Google Antigravity: subagents, prompt engineering, AI integrations and automations
+  - Built AI automations for the accounting, software and human-resources teams and helped those teams implement them (no time-saving figure yet: do not claim one)
+  - Agentic development with Claude Code (main strength), Cursor, Google Antigravity and OpenCode: subagents, prompt engineering, AI integrations and automations
   - Connected AI agents to existing tools through MCP servers (Supabase, databases, frontend and backend development tools) and built custom MCP servers
   - Stack: Python, TypeScript, Node.js, Electron desktop apps, Supabase, Google Firestore
-- **IT Service Desk Analyst - Intern** (2022, 6 months; exact months PENDIENTE) - **Soluciones Empresariales 360° (SOE 360)** (Bogotá, Colombia)
-  - Early adopter of AI tools to draft code and adjust IT solutions for the service desk (tool used PENDIENTE)
+- **IT Service Desk Analyst - Intern** (2022, 6 months) - **Soluciones Empresariales 360° (SOE 360)** (Bogotá, Colombia)
+  - Early adopter of ChatGPT in its first months, using it to draft code and adjust IT solutions for the service desk
   - Handled incident resolution applying ITIL best practices; registered, categorized and tracked tickets end-to-end
   - Technical support on software and network connectivity; documented recurring solutions to reduce resolution times
 
@@ -63,7 +63,7 @@ describe only what was built, the tools learned and the tech stack. -->
 - **TadIA - Android Academic Assistant** (2026): Android app for Tadeo students with authentication flows and academic module navigation; Material Design 3, Android API 26+. Kotlin, Jetpack Compose.
 
 ### Technical Skills
-- **Primary:** AI agents and agentic development (Claude Code, OpenCode, Cursor, Google Antigravity), MCP servers (using and building), subagents, prompt engineering, AI automations and integrations, Python
+- **Primary:** RAG systems, LangGraph graph-based agent workflows, vector databases, information indexing for fast retrieval, agentic development (Claude Code, Cursor, Google Antigravity), MCP servers (integrating and building), subagent orchestration, prompt engineering, AI automation, Python
 - **Secondary:** TypeScript, Node.js, Electron, Supabase, Google Firestore, SQL (SQL Server, SQL Developer), Pandas, Scikit-learn, Streamlit, Java (intermediate), Kotlin + Jetpack Compose, C#, JavaScript
 - **Domain:** AI solutions for business teams, machine learning fundamentals, data mining, recommendation systems, IT service management (ITIL)
 - **Software:** Git / GitHub, Scrum / Kanban, Microsoft Azure Machine Learning (certification coursework)
@@ -81,7 +81,7 @@ describe only what was built, the tools learned and the tech stack. -->
 
 ### Behavioral Profile
 - **Self-driven and proactive** - builds end-to-end projects on own initiative
-- **Results-oriented** - AI automations that cut task times for three internal teams
+- **Results-oriented** - built AI automations for three internal teams
 - **Strengths:** advanced, hands-on use of AI coding agents and MCP; fast learner across stacks; helping non-technical teams adopt tools
 - **Growth areas:** about one year of experience; cloud deployment (Azure) is early-stage (certifications, not production)
 - **Thrives in:** software-focused companies, startups and modern tech companies
@@ -106,10 +106,10 @@ describe only what was built, the tools learned and the tech stack. -->
 - Service desk / IT support roles (the candidate wants to move away from support work)
 - Internships, apprenticeship programs and semilleros
 - Roles not related to AI
-- Work mode: hybrid in Bogotá is the ideal (PENDIENTE: confirm whether fully on-site or fully remote roles are acceptable or excluded)
+- (Work mode is not a deal-breaker: hybrid in Bogotá is preferred; fully remote and fully on-site are acceptable)
 
 ## Repo Structure
-- `cv/` - LaTeX CV variants (moderncv template, banking style)
+- `cv/` - LaTeX CV variants (active template: `templates/cv/minimal-word`, the candidate's own minimalist style; `cv/preamble.tex` is shared)
 - `cover_letters/` - LaTeX cover letters (custom cover.cls template)
 - `.claude/skills/` - AI skill definitions for the application workflow
 - `.agents/skills/` - Job portal CLIs copied in from community-portals (none shipped)
@@ -139,7 +139,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] Nice-to-have requirements are highlighted where there is a match
 
 ### Consistency
-- [ ] CV follows the moderncv/banking format and the profile's page limit (1 page)
+- [ ] CV follows the active template (`minimal-word`: the candidate's own minimalist style, no colour) and the profile's page limit (1 page)
 - [ ] Cover letter uses cover.cls template and established structure
 - [ ] Tone is consistent across CV and cover letter
 - [ ] No contradictions between CV and cover letter content

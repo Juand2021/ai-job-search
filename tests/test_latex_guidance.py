@@ -203,7 +203,28 @@ class TestGeometryScaleAlignment(unittest.TestCase):
 
     GEOMETRY_SCALE = re.compile(r"\\usepackage\[scale=([0-9.]+)\]\{geometry\}")
 
+    ACTIVE_TEMPLATE = re.compile(r"Active template override: `([A-Za-z0-9_-]+)`")
+
     def test_cv_guide_and_example_cv_share_geometry_scale(self):
+        guide_text = CV_TEMPLATES.read_text(encoding="utf-8")
+        cv_text = EXAMPLE_CV.read_text(encoding="utf-8")
+        active = self.ACTIVE_TEMPLATE.search(guide_text)
+        if active and "\\input{preamble.tex}" in cv_text:
+            # A custom template is active and the master CV takes its geometry from
+            # the template's shared preamble, not from the stock guide: the two
+            # preamble copies must stay identical instead.
+            template_preamble = REPO / "templates" / "cv" / active.group(1) / "preamble.tex"
+            self.assertTrue(template_preamble.exists(), f"{template_preamble} is missing")
+            self.assertEqual(
+                (REPO / "cv" / "preamble.tex").read_text(encoding="utf-8"),
+                template_preamble.read_text(encoding="utf-8"),
+                "cv/preamble.tex must match the active template's preamble.tex",
+            )
+            self.assertIsNotNone(
+                re.search(r"\\usepackage\[[^\]]*\]\{geometry\}", template_preamble.read_text(encoding="utf-8")),
+                "the active template's preamble must declare its geometry",
+            )
+            return
         cv_match = self.GEOMETRY_SCALE.search(EXAMPLE_CV.read_text(encoding="utf-8"))
         guide_match = self.GEOMETRY_SCALE.search(CV_TEMPLATES.read_text(encoding="utf-8"))
         self.assertIsNotNone(cv_match, "cv/main_example.tex must declare geometry scale")

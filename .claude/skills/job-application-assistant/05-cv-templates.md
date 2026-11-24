@@ -4,6 +4,20 @@ framework_version: 1.4.9
 
 # CV Templates and Tailoring Guide
 
+<!-- BEGIN ACTIVE-TEMPLATE (managed by /add-template - do not edit by hand) -->
+> **Active template override: `minimal-word`**
+>
+> A custom template is active. Where this block conflicts with the stock guidance below, this block wins. Structural advice below (tailoring, page-budget, cutting rules) still applies.
+>
+> - **Template skeleton:** `templates/cv/minimal-word/template.tex` — use this as the structural reference instead of the stock template; the master CV `cv/main_example.tex` is a complete filled example
+> - **Manifest:** `templates/cv/minimal-word/TEMPLATE.md` — read this for style rules and known pitfalls before drafting
+> - **Source extension:** `.tex`
+> - **Compile command:** `rm -f <file>.pdf && mkdir -p build && lualatex -interaction=nonstopmode -output-directory=build <file>.tex && mv build/<file>.pdf ./` (not the command named in the stock guidance below — `/apply`'s compile step must use this instead). Run it from the output directory (`cv/`). The log is in `build/`, and `/apply`'s Step 5e cleanup must delete that `build/` folder too
+> - **Fonts:** Calibri through fontspec on Windows; Carlito (metric-compatible clone) elsewhere
+> - **Page limit:** exactly 1 page(s)
+> - **Output file:** `cv/main_<company>_<role>.tex`; it does `\input{preamble.tex}`, which already lives in `cv/`
+<!-- END ACTIVE-TEMPLATE -->
+
 <!-- SETUP: Profile statements and section ordering are personalized by running /setup -->
 
 ## Template: LaTeX moderncv (Banking Style)
@@ -145,13 +159,15 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 <!-- SETUP: These are populated based on your background -->
 **For AI Engineer roles (primary target):**
-> AI Engineer with hands-on experience building AI solutions and automations in the AI Tower at Periferia IT Group. Advanced user of Claude Code, OpenCode, Cursor and Google Antigravity; connects AI agents to real systems through MCP servers (Supabase, databases, dev tools) and builds custom ones. Automations that cut task times for accounting, software and HR teams. Python, TypeScript, Node.js; three Microsoft AI/ML certifications. Systems Engineering degree candidate (Universidad Jorge Tadeo Lozano).
+> AI Engineer focused on agentic development, RAG and AI automation, with AI solutions built for internal teams in the AI Tower at Periferia IT Group. Advanced Claude Code user; builds LangGraph agent workflows and connects agents to real systems through MCP. Systems Engineer (Universidad Jorge Tadeo Lozano) with three Microsoft AI/ML certifications.
 
 **For DevOps / cloud roles with AI (Azure):**
-> Systems Engineering degree candidate with about one year of experience, most recently as an AI Engineer intern building AI automations and MCP integrations (Python, TypeScript, Node.js, Supabase, Firestore). Microsoft certifications in AI and machine learning, including Azure Machine Learning foundations. Looking to bring agentic AI development into DevOps and cloud deployment.
+> AI Engineer with hands-on agentic development and AI automation experience (Claude Code, MCP, LangGraph, RAG; Python, TypeScript, Node.js, Supabase, Firestore) from the AI Tower at Periferia IT Group. Microsoft certifications in AI and machine learning, including Azure Machine Learning foundations. Looking to bring AI engineering into DevOps and cloud deployment.
 
 **Spanish version, Ingeniero de IA:**
-> Ingeniero de inteligencia artificial con experiencia práctica creando soluciones y automatizaciones con IA en la AI Tower de Periferia IT Group. Uso avanzado de Claude Code, OpenCode, Cursor y Google Antigravity; conecta agentes de IA a sistemas reales mediante servidores MCP (Supabase, bases de datos, herramientas de desarrollo) y construye MCP propios. Automatizaciones que redujeron los tiempos de los equipos de contabilidad, software y talento humano. Python, TypeScript, Node.js; tres certificaciones de Microsoft en IA y machine learning. Ingeniería de Sistemas con materias y prácticas terminadas (Universidad Jorge Tadeo Lozano).
+> Ingeniero de IA enfocado en desarrollo agéntico, RAG y automatización con IA, con soluciones de IA creadas para equipos internos en la AI Tower de Periferia IT Group. Uso avanzado de Claude Code; construye flujos de agentes con LangGraph y conecta agentes a sistemas reales mediante MCP. Ingeniero de Sistemas (Universidad Jorge Tadeo Lozano) con tres certificaciones de Microsoft en IA y machine learning.
+
+Never claim time savings or a metric for the Periferia automations until the candidate supplies one. "Systems Engineer" wording: see the open question in the thread (degree conferral is February 2027).
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

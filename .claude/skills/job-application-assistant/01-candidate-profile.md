@@ -16,9 +16,9 @@ what was built, the tools learned and the tech stack. -->
 - **Email:** juand.chavesg@gmail.com
 - **LinkedIn:** https://linkedin.com/in/Juan-Diego-Chaves-guerrero
 - **GitHub:** https://github.com/Juand2021
-- **Status:** Systems Engineering degree candidate (all coursework and internship complete; degree expected February 2027). AI Engineer intern at Periferia IT Group until 16 December 2026.
+- **Status:** Systems Engineering degree candidate (all coursework and internship complete; degree expected February 2027). AI Engineering Intern at Periferia IT Group until 16 December 2026.
 - **Availability:** from Monday 21 December 2026
-- **Constraints:** hybrid work in Bogotá is the ideal. PENDIENTE: whether fully on-site or fully remote is acceptable.
+- **Constraints:** hybrid in Bogotá preferred; fully remote and fully on-site are also acceptable (confirmed).
 
 ### Languages
 
@@ -32,22 +32,22 @@ what was built, the tools learned and the tech stack. -->
 | Degree | Period | Institution | Key Topics |
 |--------|--------|-------------|------------|
 | B.Sc. Systems Engineering | 2023 - 2026 (coursework and internship complete; degree expected Feb 2027) | Universidad Jorge Tadeo Lozano, Bogotá | Databases, data mining, AI, mobile apps, software architecture, sustainable development. Admitted via homologation from SENA |
-| Technologist in IT Systems Analysis & Development / Software Programming Technician | Graduation year PENDIENTE (SENA internship began Aug 2023; candidate believes late 2023) | SENA - Servicio Nacional de Aprendizaje, Bogotá | Information processing, networking, data quality (SQA), enterprise software analysis and development |
+| Technologist in IT Systems Analysis & Development / Software Programming Technician | Graduated 2023 (both titles, confirmed) | SENA - Servicio Nacional de Aprendizaje, Bogotá | Information processing, networking, data quality (SQA), enterprise software analysis and development |
 
 ## Professional Experience
 
-### AI Engineer - Intern - Periferia IT Group (15 Jun 2026 - 16 Dec 2026)
-Bogotá, Colombia (hybrid). Part of the company's AI Tower. Exact title wording PENDIENTE.
+### AI Engineering Intern - Periferia IT Group (15 Jun 2026 - 16 Dec 2026)
+Bogotá, Colombia (hybrid). Part of the company's AI Tower. Spanish title: Practicante de Ingeniería de IA (confirmed).
 - Built AI-based solutions and automations for internal teams as part of the AI Tower
 - Contributed to the development of an internal AI project (confidential - never name it) and built AI automations on top of it
-- AI automations significantly reduced task times for the accounting, software and human-resources teams; helped those teams implement and adopt the tools (no figure confirmed - do not invent one)
-- Agentic software development with Claude Code (main strength), OpenCode, Cursor and Google Antigravity, including subagents, prompt engineering, AI connections and automations
+- Built AI automations for the accounting, software and human-resources teams and helped those teams implement them. No time-saving claim or figure until the candidate supplies one
+- Agentic software development with Claude Code (main strength), Cursor, Google Antigravity and OpenCode (OpenCode: keep out of the competencies list), including subagents, prompt engineering, AI connections and automations
 - Connected AI agents to existing tools through MCP servers (Supabase, databases, frontend and backend development tools) and built custom MCP servers
 - Stack: Python, TypeScript, Node.js, Electron (desktop apps), Supabase, Google Firestore
 
-### IT Service Desk Analyst - Intern - Soluciones Empresariales 360° (SOE 360) (2022, 6 months; months PENDIENTE)
+### IT Service Desk Analyst - Intern - Soluciones Empresariales 360° (SOE 360) (2022, 6 months)
 Bogotá, Colombia
-- Early use of AI tools to draft code and adjust IT solutions for the service desk (candidate's statement; tool PENDIENTE)
+- Early adopter of ChatGPT in its first months, using it to draft code and adjust IT solutions for the service desk (confirmed)
 - Handled incident resolution applying ITIL best practices; registered, categorized, and tracked tickets end-to-end in the incident management system
 - Provided technical support on software and network connectivity, reducing resolution times by documenting recurring solutions
 - Performed failure analysis in information systems and IT services for clients; collaborated on continuous improvement of support processes
@@ -69,7 +69,8 @@ Bogotá, Colombia
 ## Technical Skills
 
 ### AI Engineering
-- **AI coding agents:** Claude Code (strongest, advanced), OpenCode, Cursor, Google Antigravity
+- **Generative AI / LLM systems (confirmed, current):** Retrieval-Augmented Generation (RAG), LangGraph graph-based agent workflows, vector databases, information indexing for faster retrieval. PENDIENTE: which vector database(s), and whether this work was at Periferia or in own projects
+- **AI coding agents:** Claude Code (strongest, advanced), Cursor, Google Antigravity (also OpenCode, not listed in competencies)
 - **Model Context Protocol (MCP):** connecting agents to Supabase, databases and dev tools; building custom MCP servers
 - Subagents, prompt engineering, AI integrations and automations
 - Machine learning fundamentals: Scikit-learn, Decision Tree, GridSearchCV; Microsoft certifications in AI/ML and troubleshooting agents

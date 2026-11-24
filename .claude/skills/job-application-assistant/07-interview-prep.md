@@ -22,7 +22,7 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 **S:** AI Engineer internship at Periferia IT Group (15 Jun - 16 Dec 2026, hybrid), in the company's AI Tower. Accounting, software and human-resources teams spent time on manual work. The internal AI project is confidential: never name it.
 **T:** Build AI-based solutions and automations for those teams, and help develop an internal AI project.
 **A:** Developed with Claude Code, OpenCode, Cursor and Google Antigravity (subagents, prompt engineering); connected agents to Supabase, databases and dev tools through MCP servers and built custom MCP servers; Python, TypeScript, Node.js, Electron, Supabase, Firestore; helped the teams implement the tools.
-**R:** Significantly reduced task times for the three teams. PENDIENTE: a concrete example and any figure he can defend.
+**R:** Automations delivered and implemented with the three teams. No metric yet: do not quote time savings until the candidate supplies a figure.
 **Use for:** "Tell me about your most relevant experience", "How do you use AI tools in development?", "Explain MCP / agents", "Tell me about a time you helped others adopt a tool"
 
 ### 1. HeartAttackPrevention (machine learning, delivering a complete product)
@@ -47,7 +47,7 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 **Use for:** "Tell me about a time you learned a new technology quickly", "How do you structure code for maintainability?"
 
 ### 4. SOE 360 service desk (early AI adoption, process discipline)
-**S:** 6-month IT Service Desk internship at Soluciones Empresariales 360° (2022), supporting clients' software and network connectivity. Candidate used early AI tools there to draft code and adjust IT solutions (tool and months PENDIENTE - confirm before using in an interview).
+**S:** 6-month IT Service Desk internship at Soluciones Empresariales 360° (2022), supporting clients' software and network connectivity. Candidate used ChatGPT in its first months to draft code and adjust IT solutions (confirmed).
 Use this to show early AI adoption, never to present support as the target role.
 **T:** Resolve incidents under ITIL practices and keep tickets tracked end to end.
 **A:** Registered, categorized and tracked tickets; performed failure analysis on information systems and IT services; documented recurring solutions; collaborated with the team on improving support processes.

@@ -1,0 +1,37 @@
+% Shared preamble for the minimal-word CV template (single column, black text,
+% bold/italic hierarchy, Calibri-metric font). ATS-safe: no columns, no icons,
+% contact details as literal text.
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.55in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage{fontspec}
+% Calibri on Windows (as in the candidate's Word CV); Carlito, its metric clone, elsewhere.
+\IfFontExistsTF{Calibri}{\setmainfont{Calibri}}{\setmainfont{Carlito}}
+\usepackage{xcolor}
+\definecolor{meta}{gray}{0.40}        % grey for secondary text only; no colour accents
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\linespread{1.0}
+
+% Section heading: bold small caps-style uppercase with a rule underneath
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{\MakeUppercase}[\vspace{-8pt}\rule{\linewidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{5pt}{1pt}
+
+\setlist[itemize]{leftmargin=1.6em,itemsep=0pt,topsep=1pt,parsep=0pt,label=\textbullet}
+
+% \entry{Bold title}{grey meta}{right-aligned date}{italic subtitle}
+\newcommand{\entry}[4]{%
+  \needspace{3\baselineskip}%
+  \textbf{#1}\ifx&#2&\else\ \textcolor{meta}{$|$\ #2}\fi\hfill\textcolor{meta}{#3}\par
+  \ifx&#4&\else{\itshape #4}\par\fi}
+
+% \skill{Label}{items}
+\newcommand{\skill}[2]{\textbf{#1:}\ #2\par\vspace{1pt}}
+% ATS: LuaTeX writes no space characters, so pypdf glues words together unless the
+% fonts carry a real space glyph. \atsspaces embeds one per font, zero width; keep it
+% at the start of the name line.
+\newcommand{\atsspaces}{\makebox[0pt]{{\normalfont\char32}{\normalfont\itshape\char32}{\normalfont\bfseries\char32}}}

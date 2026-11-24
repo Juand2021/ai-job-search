@@ -111,8 +111,8 @@ Drop these from results before scoring: service desk / mesa de ayuda / soporte T
 
 Home base: Bogotá, Colombia. Hybrid in Bogotá is the ideal (confirmed).
 - Bogotá, hybrid (ideal)
-- Bogotá, fully on-site or fully remote (FLAG - acceptability not yet confirmed by the candidate)
-- Other cities requiring relocation (FLAG - not yet confirmed)
+- Bogotá, fully on-site, or fully remote (acceptable - confirmed by the candidate; rank slightly below hybrid)
+- Other cities requiring relocation (FLAG - relocation not yet confirmed by the candidate)
 
 ## Language Filter
 

@@ -58,7 +58,7 @@ Set by Juan Diego on 2026-11-24. A posting that hits a hard deal-breaker is **no
 | Stated salary clearly below COP 3,000,000 / month | **FAIL** (if no salary is stated, proceed and note it) |
 | Bank or large non-software corporation, AI engineering role | **PROCEED, lower priority** - subtract 10 from Career Alignment and say so |
 | Software company, startup or modern tech company | Preferred - note as a positive |
-| Fully on-site or fully remote | **FLAG** - hybrid in Bogotá is the ideal; acceptability of the others is still unconfirmed |
+| Fully on-site or fully remote | **PASS** - hybrid in Bogotá is preferred, but the candidate confirmed both are acceptable |
 
 ## Scoring Dimensions
 
@@ -74,7 +74,7 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** AI coding agents (Claude Code - strongest, OpenCode, Cursor, Google Antigravity), MCP servers (using and building), subagents, prompt engineering, AI automations and integrations, Python
+**Strong match areas:** RAG, LangGraph / graph-based agents, vector databases and indexing, AI coding agents (Claude Code - strongest, Cursor, Google Antigravity), MCP servers (integrating and building), subagents, AI automations and integrations, Python
 **Moderate match areas:** TypeScript, Node.js, Electron, Supabase, Firestore, SQL, Pandas, Scikit-learn / ML fundamentals, Java, Kotlin, C#, JavaScript, Git, Scrum
 **Weak match areas:** production cloud deployment (Azure only at certification level; no AWS/GCP), Docker/Kubernetes, CI/CD pipelines, deep learning frameworks (PyTorch/TensorFlow), production MLOps - none confirmed in practice. Treat as honest gaps, never claim them.
 
@@ -133,7 +133,7 @@ Does this role advance career goals and contain tasks that energize?
 
 **Life situation alignment:** Consider personal constraints:
 - **Security**: minimum salary above COP 3,000,000 per month (filter only; never put it in a document)
-- **Flexibility**: hybrid in Bogotá is ideal; available from Monday 21 December 2026
+- **Flexibility**: hybrid in Bogotá preferred, remote or on-site acceptable; available from Monday 21 December 2026
 - **Professional development**: deepen AI engineering; add DevOps and Azure cloud deployment
 
 ### 6. Salary Benchmark (Optional)

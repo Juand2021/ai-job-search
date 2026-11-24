@@ -27,7 +27,7 @@ Juan Diego Chaves Guerrero describes themself as **self-driven, proactive, and r
 
 ## How You Work Best
 - Software-focused companies, startups and modern tech companies (confirmed)
-- Hybrid work in Bogotá (confirmed as the ideal)
+- Hybrid work in Bogotá preferred; remote or on-site also acceptable (confirmed)
 - Hands-on AI engineering: agents, MCP, automations (confirmed)
 
 ## Growth Areas (frame positively in applications)

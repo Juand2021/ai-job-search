@@ -13,12 +13,15 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- Populated on 2026-11-24 from 3_Hoja_de_Vida.pdf (the candidate's one-page English CV).
-Lines marked "PENDIENTE" are not in the CV and must be confirmed by Juan Diego before /apply relies on them. -->
+<!-- Updated 2026-11-24 with Juan Diego's own answers in the project thread (Periferia IT Group internship,
+finished coursework, targets, salary, deal-breakers, Microsoft certifications). Lines marked PENDIENTE
+are still unconfirmed and must not be used in documents until he confirms them.
+CONFIDENTIALITY: the internal AI project built at Periferia must never be named in any document;
+describe only what was built, the tools learned and the tech stack. -->
 
 ### Identity
 - **Name:** Juan Diego Chaves Guerrero
-- **Location:** Bogotá, Colombia (PENDIENTE: confirmar modalidad aceptada - presencial, híbrido o remoto - y si aceptaría otra ciudad)
+- **Location:** Bogotá, Colombia
 - **Phone:** +57 316 258 8234
 - **Email:** juand.chavesg@gmail.com
 - **LinkedIn:** https://linkedin.com/in/Juan-Diego-Chaves-guerrero
@@ -28,60 +31,82 @@ Lines marked "PENDIENTE" are not in the CV and must be confirmed by Juan Diego b
   |----------|-------|
   | Spanish | Native |
   | English | B2 |
-- **CV language:** English
+- **CV language:** match the posting - Spanish posting gets a Spanish CV, English posting gets an English CV (`cv_language: posting`)
+- **CV page limit:** 1 page (hard limit, set by the candidate)
 
-- **Status:** Systems Engineering student (9th semester, Universidad Jorge Tadeo Lozano), looking for junior / internship roles in software development and data
-- **LinkedIn headline:** "Systems Engineering Student · Software Developer"
+- **Status:** Systems Engineering degree candidate - all coursework and the (homologated) internship are complete; only degree conferral is pending, expected February 2027. AI Engineer intern at Periferia IT Group until 16 December 2026.
+- **Availability:** can start Monday 21 December 2026
+- **Experience:** about 1 year across two internships (SOE 360, 2022; Periferia IT Group, Jun-Dec 2026)
 
 ### Education
-- **B.Sc. Systems Engineering (in progress)** (2023-present, 9th semester) - Universidad Jorge Tadeo Lozano, Bogotá
+- **B.Sc. Systems Engineering** (2023-2026; all coursework and internship completed, degree expected February 2027) - Universidad Jorge Tadeo Lozano, Bogotá
   - Coursework: databases, data mining, AI, mobile apps, software architecture, sustainable development
   - Admitted via homologation from SENA
-- **Technologist in IT Systems Analysis & Development / Software Programming Technician** (graduated) - SENA (Servicio Nacional de Aprendizaje), Bogotá
-  - Training in information processing, networking, data quality (SQA), and enterprise software analysis and development
+- **Technologist in IT Systems Analysis & Development / Software Programming Technician** (SENA internship started August 2023; graduation year PENDIENTE - candidate believes late 2023) - SENA (Servicio Nacional de Aprendizaje), Bogotá
 
 ### Professional Experience
-- **IT Service Desk Analyst - Intern** (2022, 6 months) - **Soluciones Empresariales 360° (SOE 360)** (Bogotá, Colombia)
-  - Handled incident resolution applying ITIL best practices; registered, categorized and tracked tickets end-to-end in the incident management system
-  - Provided technical support on software and network connectivity; documented recurring solutions to reduce resolution times
-  - Performed failure analysis on information systems and IT services for clients; collaborated with the team on continuous improvement of support and operation processes
+- **AI Engineer - Intern** (15 Jun 2026 - 16 Dec 2026) - **Periferia IT Group** (Bogotá, Colombia; hybrid). Exact CV title wording PENDIENTE confirmation.
+  - Member of the company's AI Tower, building AI-based solutions and automations for internal teams
+  - Contributed to the development of an internal AI project (name confidential) and built AI automations on top of it
+  - AI automations significantly reduced task times for the accounting, software and human-resources teams; helped those teams adopt the new tools
+  - Agentic development with Claude Code (main strength), OpenCode, Cursor and Google Antigravity: subagents, prompt engineering, AI integrations and automations
+  - Connected AI agents to existing tools through MCP servers (Supabase, databases, frontend and backend development tools) and built custom MCP servers
+  - Stack: Python, TypeScript, Node.js, Electron desktop apps, Supabase, Google Firestore
+- **IT Service Desk Analyst - Intern** (2022, 6 months; exact months PENDIENTE) - **Soluciones Empresariales 360° (SOE 360)** (Bogotá, Colombia)
+  - Early adopter of AI tools to draft code and adjust IT solutions for the service desk (tool used PENDIENTE)
+  - Handled incident resolution applying ITIL best practices; registered, categorized and tracked tickets end-to-end
+  - Technical support on software and network connectivity; documented recurring solutions to reduce resolution times
 
 ### Independent Projects
-- **Planorama - Intelligent Event Recommender** (2024): web event-recommendation platform for Bogotá with a conversational interface and filters by category, location and preferences; TF-IDF engine returning relevant results in under 2 seconds; interactive geolocated event map with Folium. Python, Streamlit, TF-IDF, Pandas, Folium.
-- **HeartAttackPrevention - Cardiac Risk Predictor** (2025): predictive web app estimating heart-attack risk from health, lifestyle and demographic factors; Decision Tree trained on a large public dataset, 85.5% accuracy through data preprocessing (stack includes GridSearchCV); deployed as a web survey with personalized recommendations. Won the Universidad Jorge Tadeo Lozano Engineering Fair. Python, Scikit-learn, Decision Tree, GridSearchCV, HTML, CSS.
-- **TadIA - Android Academic Assistant** (2026): Android app for Tadeo students with authentication flows and academic module navigation; Material Design 3, clean Composable architecture, Android API 26+. Kotlin, Jetpack Compose.
+- **Planorama - Intelligent Event Recommender** (2024): web event-recommendation platform for Bogotá with a conversational interface; TF-IDF engine returning relevant results in under 2 seconds; geolocated event map. Python, Streamlit, TF-IDF, Pandas, Folium.
+- **HeartAttackPrevention - Cardiac Risk Predictor** (2025): predictive web app estimating heart-attack risk; Decision Tree trained on a large public dataset, 85.5% accuracy through data preprocessing; won the Universidad Jorge Tadeo Lozano Engineering Fair. Python, Scikit-learn, GridSearchCV, HTML, CSS.
+- **TadIA - Android Academic Assistant** (2026): Android app for Tadeo students with authentication flows and academic module navigation; Material Design 3, Android API 26+. Kotlin, Jetpack Compose.
 
 ### Technical Skills
-- **Primary:** Python (advanced), SQL (SQL Developer, SQL Server), Pandas, Scikit-learn, TF-IDF, Streamlit
-- **Secondary:** Java (intermediate), Kotlin + Jetpack Compose (Android), C#, JavaScript, Bootstrap, HTML/CSS
-- **Domain:** Data mining, machine learning basics, recommendation systems, mobile development, IT service management (ITIL), software quality assurance (SQA)
-- **Software:** Git / GitHub, Scrum / Kanban, Folium, Streamlit
+- **Primary:** AI agents and agentic development (Claude Code, OpenCode, Cursor, Google Antigravity), MCP servers (using and building), subagents, prompt engineering, AI automations and integrations, Python
+- **Secondary:** TypeScript, Node.js, Electron, Supabase, Google Firestore, SQL (SQL Server, SQL Developer), Pandas, Scikit-learn, Streamlit, Java (intermediate), Kotlin + Jetpack Compose, C#, JavaScript
+- **Domain:** AI solutions for business teams, machine learning fundamentals, data mining, recommendation systems, IT service management (ITIL)
+- **Software:** Git / GitHub, Scrum / Kanban, Microsoft Azure Machine Learning (certification coursework)
 
 ### Certifications
-- None listed in the CV (PENDIENTE: añadir cursos o certificaciones si los tienes)
+- **Building Intelligent Troubleshooting Agents** - Microsoft - Nov 2026 (credential ID NU5OU5TY6151)
+- **AI and Machine Learning Algorithms and Techniques** - Microsoft - Nov 2026 (credential ID PKTPLM48L1XV)
+- **Foundations of AI and Machine Learning** - Microsoft - Nov 2026 (credential ID XCCCV5SKK18L)
 
 ### Publications
 - None
 
 ### Awards
-- Winner - Universidad Jorge Tadeo Lozano Engineering Fair (2025), with the HeartAttackPrevention project
+- Winner - Universidad Jorge Tadeo Lozano Engineering Fair (2025), HeartAttackPrevention project
 
 ### Behavioral Profile
-- **Self-driven and proactive** - builds end-to-end personal projects on own initiative (three shipped projects 2024-2026)
-- **Results-oriented** - reports concrete outcomes (85.5% accuracy, <2 s recommendations, fair award)
-- **Strengths:** applied Python and data work, learning new stacks quickly (from Python/data to Kotlin/Android), structured support processes (ITIL)
-- **Growth areas:** limited formal work experience (one 6-month internship); production/team-scale software experience still ahead
-- **Thrives in:** PENDIENTE (confirmar: tipo de equipo, tamaño de empresa, estilo de liderazgo)
+- **Self-driven and proactive** - builds end-to-end projects on own initiative
+- **Results-oriented** - AI automations that cut task times for three internal teams
+- **Strengths:** advanced, hands-on use of AI coding agents and MCP; fast learner across stacks; helping non-technical teams adopt tools
+- **Growth areas:** about one year of experience; cloud deployment (Azure) is early-stage (certifications, not production)
+- **Thrives in:** software-focused companies, startups and modern tech companies
 
 ### What Excites You
-- Artificial intelligence and machine learning
-- Data mining and turning data into useful products
+- Building AI agents, automations and AI-powered products
+- AI engineering combined with DevOps and cloud deployment (Azure)
+
+### Target Roles
+- **Primary:** AI Engineer (Ingeniero de Inteligencia Artificial)
+- **Also interested, always AI-related:** DevOps engineer with AI, cloud / AI deployment engineer (Azure)
+- **Level:** analyst / junior professional. Not internships, not apprenticeship programs (SENA apprentice, semilleros)
 
 ### Target Sectors
-- PENDIENTE (confirmar sectores y empresas objetivo; por ejemplo tecnología, fintech, salud digital, consultoría de software en Bogotá)
+- **Preferred:** companies focused 100% on software development; startups and modern tech companies
+- **Lower priority (not excluded):** banks and large non-software corporations - consider only for a genuinely good AI engineering role
+
+### Salary
+- Minimum target: above COP 3,000,000 per month. Use only for filtering; never write it in a CV or cover letter.
 
 ### Deal-breakers
-- PENDIENTE (confirmar: salario mínimo, modalidad, horario compatible con la universidad, etc.)
+- Service desk / IT support roles (the candidate wants to move away from support work)
+- Internships, apprenticeship programs and semilleros
+- Roles not related to AI
+- Work mode: hybrid in Bogotá is the ideal (PENDIENTE: confirm whether fully on-site or fully remote roles are acceptable or excluded)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
@@ -92,7 +117,7 @@ Lines marked "PENDIENTE" are not in the CV and must be confirmed by Juan Diego b
 ## Workflow for New Job Applications
 1. User provides a job posting (URL or text)
 2. **Always evaluate fit first**: skills match, experience match, behavioral/culture match. With `/apply`, present this assessment to the user before proceeding. With `/postular`, the assessment is presented in the final report instead, and the run stops to ask only when the score is below `fit_threshold` (`pipeline.config.json`, default 65) or the posting is flagged.
-3. If good fit: create targeted CV (`cv/main_<company>_<role>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
+3. If good fit (and no deal-breaker: support/service desk, internships, non-AI roles): create targeted CV (`cv/main_<company>_<role>.tex`) and cover letter (`cover_letters/cover_<company>_<role>.tex`)
 4. **Verify both documents** (see Verification Checklist below)
 5. Prepare interview talking points based on the role requirements and your strengths
 
@@ -114,13 +139,15 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 - [ ] Nice-to-have requirements are highlighted where there is a match
 
 ### Consistency
-- [ ] CV follows the standard 2-page moderncv/banking format
+- [ ] CV follows the moderncv/banking format and the profile's page limit (1 page)
 - [ ] Cover letter uses cover.cls template and established structure
 - [ ] Tone is consistent across CV and cover letter
 - [ ] No contradictions between CV and cover letter content
 
 ### Quality
 - [ ] No LaTeX syntax errors (balanced braces, correct commands)
+- [ ] CV language matches the posting's language (Spanish posting -> Spanish CV, English posting -> English CV)
+- [ ] The internal AI project from Periferia IT Group is never named (confidential)
 - [ ] No spelling or grammar errors
 - [ ] Agentic coding / AI tooling references mention **Claude Code** by name
 - [ ] Cover letter is addressed to the correct person (or "Dear Hiring Manager" if unknown)
@@ -130,7 +157,7 @@ After creating or updating a CV or cover letter, re-read the generated file and 
 ### Compiled PDF verification (MANDATORY - never skip)
 Both documents MUST be compiled and visually inspected via the Read tool on the PDF output. "Looks fine in the .tex" is not acceptable - LaTeX page-break decisions are unpredictable. Iterate until these all pass:
 - [ ] CV compiled with **lualatex** (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors). Cover letter compiled with **xelatex** (cover.cls requires fontspec). If a custom template is active (registered via `/add-template`), compile with its declared command instead — see the `ACTIVE-TEMPLATE` block in `05-cv-templates.md`/`06-cover-letter-templates.md`.
-- [ ] **CV is exactly 2 pages** - not 1, not 3
+- [ ] **CV is exactly 1 page** (the candidate's page limit) - never 2
 - [ ] **No orphaned `\cventry` titles** - a job/education title must never sit at the bottom of a page with its bullets spilling to the next page. Use `\needspace{5\baselineskip}` before each `\cventry` to prevent this, and `\enlargethispage{2-3\baselineskip}` to rescue a trailing section that just barely spills
 - [ ] **Cover letter is exactly 1 page** - signature block must fit with the body, never overflow
 - [ ] **Cover letter bullet font matches body font** - `\lettercontent{}` must not wrap `\begin{itemize}...\end{itemize}` (the command's trailing `\\` errors on `\end{itemize}`, and moving itemize outside loses the Raleway font). Standard pattern: close `\lettercontent{}`, then wrap the list in `{\raggedright\fontspec[Path = OpenFonts/fonts/raleway/, BoldFont = Raleway-Bold]{Raleway-Medium}\fontsize{11pt}{13pt}\selectfont \begin{itemize}...\end{itemize}\par}`

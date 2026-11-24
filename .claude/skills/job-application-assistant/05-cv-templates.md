@@ -20,7 +20,7 @@ All CVs use the moderncv LaTeX package with the "banking" style and "blue" color
 cd cv && lualatex -interaction=nonstopmode main_<company>_<role>.tex
 ```
 
-Expected output: `Output written on main_<company>_<role>.pdf (2 pages, ...)`. Any page count other than 2 is a failure that must be fixed before presenting to the user.
+Expected output: `Output written on main_<company>_<role>.pdf (1 page, ...)`. The candidate set a **1-page** CV limit (CLAUDE.md, `CV page limit`). Any page count other than 1 is a failure that must be fixed before presenting to the user.
 
 ### Missing LaTeX packages
 
@@ -144,14 +144,14 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 **Create 2-3 profile statement templates for your main role types:**
 
 <!-- SETUP: These are populated based on your background -->
-**For Python / data / AI roles (junior developer, data analyst, junior data scientist):**
-> Systems Engineering student (9th semester, Universidad Jorge Tadeo Lozano) and SENA-trained software technologist, passionate about AI and data mining. Builds end-to-end Python data products: a TF-IDF event recommender that returns results in under 2 seconds, and a cardiac-risk predictor (Scikit-learn, 85.5% accuracy) that won the university's Engineering Fair. Brings SQL, Pandas and Streamlit, plus the process discipline of an ITIL service-desk internship.
+**For AI Engineer roles (primary target):**
+> AI Engineer with hands-on experience building AI solutions and automations in the AI Tower at Periferia IT Group. Advanced user of Claude Code, OpenCode, Cursor and Google Antigravity; connects AI agents to real systems through MCP servers (Supabase, databases, dev tools) and builds custom ones. Automations that cut task times for accounting, software and HR teams. Python, TypeScript, Node.js; three Microsoft AI/ML certifications. Systems Engineering degree candidate (Universidad Jorge Tadeo Lozano).
 
-**For software / mobile development roles (junior developer, Android developer):**
-> Systems Engineering student (9th semester) and SENA Software Programming Technician with hands-on experience across Python, Java, Kotlin, C# and SQL. Built TadIA, an Android academic assistant in Kotlin and Jetpack Compose following Material Design 3, and two Python web applications. Self-driven and results-oriented, with ITIL support experience from a 6-month service-desk internship.
+**For DevOps / cloud roles with AI (Azure):**
+> Systems Engineering degree candidate with about one year of experience, most recently as an AI Engineer intern building AI automations and MCP integrations (Python, TypeScript, Node.js, Supabase, Firestore). Microsoft certifications in AI and machine learning, including Azure Machine Learning foundations. Looking to bring agentic AI development into DevOps and cloud deployment.
 
-**For IT support / service desk roles:**
-> Systems Engineering student with a 6-month IT Service Desk internship at SOE 360: ITIL incident management, end-to-end ticket tracking, software and network-connectivity support, and documentation of recurring solutions to cut resolution times. Combines that process discipline with programming skills in Python, Java and SQL.
+**Spanish version, Ingeniero de IA:**
+> Ingeniero de inteligencia artificial con experiencia práctica creando soluciones y automatizaciones con IA en la AI Tower de Periferia IT Group. Uso avanzado de Claude Code, OpenCode, Cursor y Google Antigravity; conecta agentes de IA a sistemas reales mediante servidores MCP (Supabase, bases de datos, herramientas de desarrollo) y construye MCP propios. Automatizaciones que redujeron los tiempos de los equipos de contabilidad, software y talento humano. Python, TypeScript, Node.js; tres certificaciones de Microsoft en IA y machine learning. Ingeniería de Sistemas con materias y prácticas terminadas (Universidad Jorge Tadeo Lozano).
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 
@@ -254,7 +254,7 @@ Related trap: a bullet whose text begins with a literal `[` must be braced - `\i
 After writing the CV and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean. Workflow:
 
 1. Run `lualatex -interaction=nonstopmode main_<company>_<role>.tex` (a missing `.sty`/`.cls`: see **Missing LaTeX packages** above)
-2. Check the output page count: must be exactly 2
+2. Check the output page count: must be exactly 1 (the candidate's limit)
 3. Read the PDF via the Read tool and visually inspect both pages
 4. Check for **orphaned entries**: a `\cventry` title line must never sit alone at the bottom of page 1 with its bullets on page 2
 
@@ -324,21 +324,21 @@ Two independent causes, both easy to avoid:
 
 **Cause 1 is mechanical in step 5d**: `python3 tools/verify_pdf.py cv/main_<company>_<role>.pdf --ascii-dates` scans the raw text layer for a year joined to a Unicode dash and exits 1 naming each hit with its code point (`U+2013 in 'Role Title 2016–2024'`). It deliberately reads the raw layer: the fold that lets `--contains "2016-2024"` match what the template renders maps that same en-dash back to `-`, so `--contains` can never see this. A year on either side of the dash is enough, so `Mar 2016 – Jul 2016` and `2016 – Present` are caught too; a numeric range with no year (`EUR 600k–1M`) is left alone. **Cause 2 stays a read-through check**: after extracting the text layer, confirm every experience entry shows a start *and* an end. Because both failures are silent and invisible in the PDF, the candidate otherwise discovers them only while filling in the application form.
 
-## Page Budget - Hard 2-Page Limit
+## Page Budget - Hard 1-Page Limit
 
-The CV **must** fit on exactly 2 pages when compiled. Use these content limits as a guide:
+The candidate set a 1-page CV (CLAUDE.md, `CV page limit: 1`). The CV **must** fit on exactly 1 page when compiled. Use these content limits as a guide:
 
 | Section | Max budget |
 |---------|-----------|
-| Profile statement | 3-4 lines |
-| Skills | 5 items, each 1-2 lines |
-| Most recent role | 4-5 bullets |
-| Previous role | 2-3 bullets |
-| Older roles | 2 bullets (1 line each) |
-| Education | 2-3 entries |
-| Publications | 2-3 entries |
-| Awards | 3 entries, single line each |
-| References | "Available upon request." (single line) |
+| Profile statement | 3 lines |
+| Skills | 4 items, 1 line each |
+| Most recent role | 4 bullets |
+| Previous role | 1-2 bullets |
+| Projects | 2-3 entries, 1 line each, most relevant to the posting first |
+| Education | 2 entries, 1 line of detail at most |
+| Certifications | one line each, or one combined line |
+| Languages + Awards | one line each |
+| References | omit the section (one page has no room); "available upon request" is assumed |
 
 **If in doubt, cut rather than squeeze.** Reducing `\vspace` or geometry scale to force-fit content makes the CV look cramped.
 
@@ -367,7 +367,7 @@ Cut the lowest-total-score line first, regardless of which section it sits in.
 
 - Do not mechanically cut from the bottom of a static section list without checking relevance. "Cut the oldest role first" is wrong if that role is literally about the skill the posting asks for.
 - Do not cut the one concrete example the cover letter leans on. Relevance is measured against the cover letter you wrote, not just the job posting — interviewers will have read both.
-- Do not cut to fit if the fit is borderline (2.02 pages). Prefer `\enlargethispage{2-3\baselineskip}` on a late section for near-misses; reserve content cuts for genuine overflow (content on page 3 that is more than a single trailing section).
+- Do not cut to fit if the fit is borderline (1.02 pages). Prefer `\enlargethispage{2-3\baselineskip}` on a late section for near-misses; reserve content cuts for genuine overflow (content on page 2 that is more than a single trailing line).
 
 ## Recommended Section Order
 

@@ -46,6 +46,20 @@ Judge the level comparison the same way you judge everything else in this framew
 
 **Worked example:** a candidate whose Languages table lists Spanish (Native) and English (B1/B2). A posting requiring "fluent Russian" → **FAIL**, Russian isn't declared at all. A posting requiring "fluent English" → **FLAG**, English is declared but "fluent" plausibly exceeds B1/B2 — score and draft the application, but tell the candidate this posting's bar may be a stretch and let them decide. A posting requiring "conversational English" or unspecified English → **PASS**, B1/B2 clears a "conversational" bar cleanly.
 
+## Candidate Deal-breakers and Priorities - run before scoring
+
+Set by Juan Diego on 2026-11-24. A posting that hits a hard deal-breaker is **not scored and not drafted**; report it with the quoted line.
+
+| Posting | Verdict |
+|---|---|
+| Service desk, help desk, mesa de ayuda, mesa de servicio, IT support / soporte TI as the main job | **FAIL** |
+| Internship, práctica, practicante, aprendiz, SENA apprentice program, semillero, trainee program | **FAIL** |
+| Role not related to AI | **FAIL** |
+| Stated salary clearly below COP 3,000,000 / month | **FAIL** (if no salary is stated, proceed and note it) |
+| Bank or large non-software corporation, AI engineering role | **PROCEED, lower priority** - subtract 10 from Career Alignment and say so |
+| Software company, startup or modern tech company | Preferred - note as a positive |
+| Fully on-site or fully remote | **FLAG** - hybrid in Bogotá is the ideal; acceptability of the others is still unconfirmed |
+
 ## Scoring Dimensions
 
 Evaluate each job posting against these five dimensions:
@@ -60,9 +74,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** Python (advanced), Pandas, Scikit-learn, Streamlit, data mining, recommendation systems (TF-IDF), SQL (SQL Server, SQL Developer)
-**Moderate match areas:** Java (intermediate), Kotlin + Jetpack Compose (Android), C#, JavaScript, HTML/CSS, Bootstrap, Git/GitHub, Scrum/Kanban, ITIL, SQA
-**Weak match areas:** cloud platforms (AWS, Azure, GCP), Docker/Kubernetes, deep learning frameworks, frontend frameworks (React, Angular), backend frameworks, production MLOps - none appear in the CV
+**Strong match areas:** AI coding agents (Claude Code - strongest, OpenCode, Cursor, Google Antigravity), MCP servers (using and building), subagents, prompt engineering, AI automations and integrations, Python
+**Moderate match areas:** TypeScript, Node.js, Electron, Supabase, Firestore, SQL, Pandas, Scikit-learn / ML fundamentals, Java, Kotlin, C#, JavaScript, Git, Scrum
+**Weak match areas:** production cloud deployment (Azure only at certification level; no AWS/GCP), Docker/Kubernetes, CI/CD pipelines, deep learning frameworks (PyTorch/TensorFlow), production MLOps - none confirmed in practice. Treat as honest gaps, never claim them.
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +88,10 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** IT service desk / technical support (ITIL, 6-month internship)
-**Moderate:** Python and data / ML development, Android development - personal and academic projects only, no paid role yet
-**Entry-level:** software developer, data analyst, data scientist, ML engineer, mobile developer. Target junior, trainee and internship (practicante) levels; 'X+ years required' postings beyond 1-2 years are a stretch
+**Strong:** AI engineering / AI automation inside a company (Periferia IT Group AI Tower, Jun-Dec 2026)
+**Moderate:** software development with AI agents (TypeScript, Node.js, Electron, Supabase); ML and data projects (personal/academic)
+**Entry-level:** DevOps with AI, cloud / AI deployment (Azure) - interest and certifications, no production experience
+**Total experience:** about 1 year across two internships. Postings asking 1-2 years are a fair stretch; 3+ years is a real gap to address honestly.
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +122,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- Start a career in software development, data or AI (stated passion: AI and data mining)
-- Gain professional experience on a team while finishing the Systems Engineering degree
-- PENDIENTE - confirm longer-term direction (e.g. data science, ML engineering, mobile)
+- Land a full-time AI Engineer role (analyst / junior level) - the primary target
+- Grow toward AI + DevOps / cloud deployment (Azure) roles, always AI-related
+- Work at a software-focused company, startup or modern tech company
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: building data and AI products, recommendation and prediction models (from the CV's projects; confirm)
-- Tasks that drain: PENDIENTE
+- Tasks that energize: building AI agents, automations, MCP integrations and AI-powered tools
+- Tasks that drain: service desk / IT support work (a deal-breaker)
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: PENDIENTE
-- **Flexibility**: still studying (9th semester) - PENDIENTE: confirm schedule compatibility with classes
-- **Professional development**: learning production engineering practices; growing in AI/data
+- **Security**: minimum salary above COP 3,000,000 per month (filter only; never put it in a document)
+- **Flexibility**: hybrid in Bogotá is ideal; available from Monday 21 December 2026
+- **Professional development**: deepen AI engineering; add DevOps and Azure cloud deployment
 
 ### 6. Salary Benchmark (Optional)
 

@@ -69,6 +69,9 @@ describe only what was built, the tools learned and the tech stack. -->
 - **Software:** Git / GitHub, Scrum / Kanban, Microsoft Azure Machine Learning (certification coursework)
 
 ### Certifications
+- **Microsoft AI & ML Engineering Professional Certificate** - Microsoft (Coursera) - completed 27 Nov 2026 (5 courses; Credly badge pending claim). On the CV: one main entry with the 5 courses listed below it.
+- **Microsoft Azure for AI and Machine Learning** - Microsoft - Nov 2026 (confirmed by candidate)
+- **Advanced AI and Machine Learning Techniques and Capstone** - Microsoft - 27 Nov 2026
 - **Building Intelligent Troubleshooting Agents** - Microsoft - Nov 2026 (credential ID NU5OU5TY6151)
 - **AI and Machine Learning Algorithms and Techniques** - Microsoft - Nov 2026 (credential ID PKTPLM48L1XV)
 - **Foundations of AI and Machine Learning** - Microsoft - Nov 2026 (credential ID XCCCV5SKK18L)
@@ -78,6 +81,9 @@ describe only what was built, the tools learned and the tech stack. -->
 
 ### Awards
 - Winner - Universidad Jorge Tadeo Lozano Engineering Fair (2025), HeartAttackPrevention project
+
+### Microsoft Azure (confirmed by candidate, 27 Nov 2026)
+- Hands-on with Azure Machine Learning, Azure OpenAI and Azure DevOps. Wording rule: "Microsoft-certified, with training in advanced AI/ML techniques" - never "specialist" (candidate chose this).
 
 ### Behavioral Profile
 - **Self-driven and proactive** - builds end-to-end projects on own initiative
